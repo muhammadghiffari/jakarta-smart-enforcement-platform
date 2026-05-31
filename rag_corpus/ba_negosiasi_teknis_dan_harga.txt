@@ -1,0 +1,19 @@
+# Source: Ba Negosiasi Teknis Dan Harga.pdf
+# Extracted for JSEP optional RAG / reviewer-assist drafting
+# Not authoritative for sanctions or enforcement decisions
+
+[Page 1]
+
+[Page 2]
+
+[Page 3]
+
+[Page 4]
+
+[Page 5]
+
+[Page 6]
+
+[Page 7]
+
+[Page 8]

@@ -1,0 +1,149 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_type": "NO_PARKING",
+        "threshold_s": 30,
+        "corridor": "SUDIRMAN",
+        "name": "Sudirman no-parking north"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.8219,
+              -6.2022
+            ],
+            [
+              106.8229,
+              -6.2022
+            ],
+            [
+              106.8229,
+              -6.2032
+            ],
+            [
+              106.8219,
+              -6.2032
+            ],
+            [
+              106.8219,
+              -6.2022
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_type": "BUSWAY_LANE",
+        "threshold_s": 0,
+        "corridor": "SUDIRMAN",
+        "name": "Sudirman busway corridor"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.821,
+              -6.201
+            ],
+            [
+              106.822,
+              -6.201
+            ],
+            [
+              106.822,
+              -6.205
+            ],
+            [
+              106.821,
+              -6.205
+            ],
+            [
+              106.821,
+              -6.201
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_type": "BICYCLE_LANE",
+        "threshold_s": 10,
+        "corridor": "SUDIRMAN",
+        "name": "Sudirman bicycle lane"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.8225,
+              -6.201
+            ],
+            [
+              106.823,
+              -6.201
+            ],
+            [
+              106.823,
+              -6.206
+            ],
+            [
+              106.8225,
+              -6.206
+            ],
+            [
+              106.8225,
+              -6.201
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_type": "DESIGNATED_STOP",
+        "threshold_s": 15,
+        "corridor": "SUDIRMAN",
+        "name": "Halte Sudirman BRT"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              106.8216,
+              -6.204
+            ],
+            [
+              106.8224,
+              -6.204
+            ],
+            [
+              106.8224,
+              -6.2045
+            ],
+            [
+              106.8216,
+              -6.2045
+            ],
+            [
+              106.8216,
+              -6.204
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

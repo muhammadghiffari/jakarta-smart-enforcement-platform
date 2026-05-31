@@ -1,0 +1,5002 @@
+{
+  "B 9397 QXI": {
+    "owner_name": "Pemilik Kendaraan QXI",
+    "nik_masked": "3179708****3611",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Silver",
+    "year": 2022,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 2184 UQM": {
+    "owner_name": "Pemilik Kendaraan UQM",
+    "nik_masked": "3176310****8360",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Putih",
+    "year": 2021,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 9230 BNS": {
+    "owner_name": "Pemilik Kendaraan BNS",
+    "nik_masked": "3177413****4958",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2017,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 6881 BI": {
+    "owner_name": "Pemilik Kendaraan  BI",
+    "nik_masked": "3172479****1249",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Putih",
+    "year": 2020,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 7187 ZM": {
+    "owner_name": "Pemilik Kendaraan  ZM",
+    "nik_masked": "3175266****8751",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2015,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 5968 L": {
+    "owner_name": "Pemilik Kendaraan 8 L",
+    "nik_masked": "3178375****2533",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Silver",
+    "year": 2022,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 8979 TRB": {
+    "owner_name": "Pemilik Kendaraan TRB",
+    "nik_masked": "3172582****8061",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Hitam",
+    "year": 2021,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 6389 JYU": {
+    "owner_name": "Pemilik Kendaraan JYU",
+    "nik_masked": "3171800****5150",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Biru",
+    "year": 2019,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 8115 Z": {
+    "owner_name": "Pemilik Kendaraan 5 Z",
+    "nik_masked": "3179290****5891",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Silver",
+    "year": 2024,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 4317 FX": {
+    "owner_name": "Pemilik Kendaraan  FX",
+    "nik_masked": "3173614****7730",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Biru",
+    "year": 2016,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 3663 PRI": {
+    "owner_name": "Pemilik Kendaraan PRI",
+    "nik_masked": "3171855****8310",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Putih",
+    "year": 2023,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 9365 E": {
+    "owner_name": "Pemilik Kendaraan 5 E",
+    "nik_masked": "3172791****5213",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Putih",
+    "year": 2017,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9904 S": {
+    "owner_name": "Pemilik Kendaraan 4 S",
+    "nik_masked": "3178393****2200",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Biru",
+    "year": 2019,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 2092 B": {
+    "owner_name": "Pemilik Kendaraan 2 B",
+    "nik_masked": "3176719****6221",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Biru",
+    "year": 2021,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 4925 LKV": {
+    "owner_name": "Pemilik Kendaraan LKV",
+    "nik_masked": "3172515****2313",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Merah",
+    "year": 2017,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 4439 G": {
+    "owner_name": "Pemilik Kendaraan 9 G",
+    "nik_masked": "3171867****8952",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2021,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9590 L": {
+    "owner_name": "Pemilik Kendaraan 0 L",
+    "nik_masked": "3174182****5141",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Merah",
+    "year": 2024,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 5812 A": {
+    "owner_name": "Pemilik Kendaraan 2 A",
+    "nik_masked": "3176471****7192",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Merah",
+    "year": 2015,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 1245 I": {
+    "owner_name": "Pemilik Kendaraan 5 I",
+    "nik_masked": "3171300****2636",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Hitam",
+    "year": 2016,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 8563 JBS": {
+    "owner_name": "Pemilik Kendaraan JBS",
+    "nik_masked": "3171281****2697",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2024,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 7091 WKE": {
+    "owner_name": "Pemilik Kendaraan WKE",
+    "nik_masked": "3171626****2795",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Silver",
+    "year": 2020,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 1695 KS": {
+    "owner_name": "Pemilik Kendaraan  KS",
+    "nik_masked": "3177989****4412",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Merah",
+    "year": 2024,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 5655 YR": {
+    "owner_name": "Pemilik Kendaraan  YR",
+    "nik_masked": "3178615****3026",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Silver",
+    "year": 2017,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 8161 N": {
+    "owner_name": "Pemilik Kendaraan 1 N",
+    "nik_masked": "3175270****9349",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Putih",
+    "year": 2019,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 8853 V": {
+    "owner_name": "Pemilik Kendaraan 3 V",
+    "nik_masked": "3171007****3565",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2022,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2472 ZMZ": {
+    "owner_name": "Pemilik Kendaraan ZMZ",
+    "nik_masked": "3173868****6837",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Hitam",
+    "year": 2024,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 2679 TKH": {
+    "owner_name": "Pemilik Kendaraan TKH",
+    "nik_masked": "3173318****9866",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Biru",
+    "year": 2017,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 5484 NNR": {
+    "owner_name": "Pemilik Kendaraan NNR",
+    "nik_masked": "3173269****7383",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Putih",
+    "year": 2019,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2252 ZXD": {
+    "owner_name": "Pemilik Kendaraan ZXD",
+    "nik_masked": "3176380****5950",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Merah",
+    "year": 2019,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7240 EK": {
+    "owner_name": "Pemilik Kendaraan  EK",
+    "nik_masked": "3173798****7281",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Hitam",
+    "year": 2019,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 9586 AYX": {
+    "owner_name": "Pemilik Kendaraan AYX",
+    "nik_masked": "3175317****9357",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Putih",
+    "year": 2022,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 4477 AKY": {
+    "owner_name": "Pemilik Kendaraan AKY",
+    "nik_masked": "3179284****3363",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Merah",
+    "year": 2018,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 4465 D": {
+    "owner_name": "Pemilik Kendaraan 5 D",
+    "nik_masked": "3177934****8358",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Hitam",
+    "year": 2018,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 1294 UQS": {
+    "owner_name": "Pemilik Kendaraan UQS",
+    "nik_masked": "3173722****6225",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Hitam",
+    "year": 2018,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 7106 I": {
+    "owner_name": "Pemilik Kendaraan 6 I",
+    "nik_masked": "3175946****1963",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Merah",
+    "year": 2019,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 2979 EI": {
+    "owner_name": "Pemilik Kendaraan  EI",
+    "nik_masked": "3176433****6600",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Silver",
+    "year": 2018,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7676 LE": {
+    "owner_name": "Pemilik Kendaraan  LE",
+    "nik_masked": "3177053****9087",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Putih",
+    "year": 2016,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 1051 VA": {
+    "owner_name": "Pemilik Kendaraan  VA",
+    "nik_masked": "3175910****8917",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Merah",
+    "year": 2019,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 6127 X": {
+    "owner_name": "Pemilik Kendaraan 7 X",
+    "nik_masked": "3174284****8649",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Putih",
+    "year": 2016,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 6742 X": {
+    "owner_name": "Pemilik Kendaraan 2 X",
+    "nik_masked": "3179399****2112",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Merah",
+    "year": 2022,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "BELUM_BAYAR"
+  },
+  "F 9008 G": {
+    "owner_name": "Pemilik Kendaraan 8 G",
+    "nik_masked": "3173474****5112",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Silver",
+    "year": 2021,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 9297 JB": {
+    "owner_name": "Pemilik Kendaraan  JB",
+    "nik_masked": "3178392****7184",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Merah",
+    "year": 2021,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 5670 I": {
+    "owner_name": "Pemilik Kendaraan 0 I",
+    "nik_masked": "3175905****3386",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2019,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7642 OYK": {
+    "owner_name": "Pemilik Kendaraan OYK",
+    "nik_masked": "3172473****4071",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Hitam",
+    "year": 2015,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 3233 I": {
+    "owner_name": "Pemilik Kendaraan 3 I",
+    "nik_masked": "3177039****7061",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Putih",
+    "year": 2015,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 9334 KL": {
+    "owner_name": "Pemilik Kendaraan  KL",
+    "nik_masked": "3172294****1710",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Putih",
+    "year": 2015,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 7357 C": {
+    "owner_name": "Pemilik Kendaraan 7 C",
+    "nik_masked": "3179836****1098",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Hitam",
+    "year": 2021,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "BELUM_BAYAR"
+  },
+  "F 7992 A": {
+    "owner_name": "Pemilik Kendaraan 2 A",
+    "nik_masked": "3172363****3216",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Putih",
+    "year": 2023,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 1511 E": {
+    "owner_name": "Pemilik Kendaraan 1 E",
+    "nik_masked": "3178845****8467",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Biru",
+    "year": 2023,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 3597 ANT": {
+    "owner_name": "Pemilik Kendaraan ANT",
+    "nik_masked": "3179006****6668",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Putih",
+    "year": 2016,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 3512 C": {
+    "owner_name": "Pemilik Kendaraan 2 C",
+    "nik_masked": "3176284****8731",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Hitam",
+    "year": 2017,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 6251 SQ": {
+    "owner_name": "Pemilik Kendaraan  SQ",
+    "nik_masked": "3171628****6810",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Biru",
+    "year": 2021,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2439 V": {
+    "owner_name": "Pemilik Kendaraan 9 V",
+    "nik_masked": "3172948****5417",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Putih",
+    "year": 2015,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 2552 EU": {
+    "owner_name": "Pemilik Kendaraan  EU",
+    "nik_masked": "3178890****5069",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Silver",
+    "year": 2018,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 3766 PLG": {
+    "owner_name": "Pemilik Kendaraan PLG",
+    "nik_masked": "3177979****8037",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2024,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 6435 TA": {
+    "owner_name": "Pemilik Kendaraan  TA",
+    "nik_masked": "3175883****2946",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Biru",
+    "year": 2020,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 1532 L": {
+    "owner_name": "Pemilik Kendaraan 2 L",
+    "nik_masked": "3174613****7506",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Biru",
+    "year": 2022,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 9554 CIP": {
+    "owner_name": "Pemilik Kendaraan CIP",
+    "nik_masked": "3175771****6078",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Silver",
+    "year": 2024,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 1997 EP": {
+    "owner_name": "Pemilik Kendaraan  EP",
+    "nik_masked": "3176264****1211",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2022,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 7680 TM": {
+    "owner_name": "Pemilik Kendaraan  TM",
+    "nik_masked": "3176646****5376",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Merah",
+    "year": 2020,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9132 BTD": {
+    "owner_name": "Pemilik Kendaraan BTD",
+    "nik_masked": "3178129****3024",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Hitam",
+    "year": 2016,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 8112 N": {
+    "owner_name": "Pemilik Kendaraan 2 N",
+    "nik_masked": "3175390****3124",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Merah",
+    "year": 2023,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 1588 SOX": {
+    "owner_name": "Pemilik Kendaraan SOX",
+    "nik_masked": "3175172****4698",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2018,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2181 S": {
+    "owner_name": "Pemilik Kendaraan 1 S",
+    "nik_masked": "3172226****8511",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2019,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 9336 D": {
+    "owner_name": "Pemilik Kendaraan 6 D",
+    "nik_masked": "3179955****8115",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Hitam",
+    "year": 2019,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 5612 MJ": {
+    "owner_name": "Pemilik Kendaraan  MJ",
+    "nik_masked": "3173387****5888",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Merah",
+    "year": 2017,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 3100 YZ": {
+    "owner_name": "Pemilik Kendaraan  YZ",
+    "nik_masked": "3171819****4990",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Biru",
+    "year": 2019,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 7382 G": {
+    "owner_name": "Pemilik Kendaraan 2 G",
+    "nik_masked": "3175983****5677",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Hitam",
+    "year": 2020,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 3520 P": {
+    "owner_name": "Pemilik Kendaraan 0 P",
+    "nik_masked": "3176687****9179",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Merah",
+    "year": 2020,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7347 TMR": {
+    "owner_name": "Pemilik Kendaraan TMR",
+    "nik_masked": "3178595****7704",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Merah",
+    "year": 2016,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 9311 VK": {
+    "owner_name": "Pemilik Kendaraan  VK",
+    "nik_masked": "3172285****9420",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Hitam",
+    "year": 2021,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 3068 QNN": {
+    "owner_name": "Pemilik Kendaraan QNN",
+    "nik_masked": "3178742****8431",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Merah",
+    "year": 2017,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 4196 J": {
+    "owner_name": "Pemilik Kendaraan 6 J",
+    "nik_masked": "3178482****9064",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Hitam",
+    "year": 2022,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 3292 PU": {
+    "owner_name": "Pemilik Kendaraan  PU",
+    "nik_masked": "3177828****1060",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2021,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 4266 XN": {
+    "owner_name": "Pemilik Kendaraan  XN",
+    "nik_masked": "3177066****6645",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Putih",
+    "year": 2019,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 9958 YOY": {
+    "owner_name": "Pemilik Kendaraan YOY",
+    "nik_masked": "3174079****6498",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Biru",
+    "year": 2024,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 1950 W": {
+    "owner_name": "Pemilik Kendaraan 0 W",
+    "nik_masked": "3171691****5801",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Putih",
+    "year": 2023,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9501 YT": {
+    "owner_name": "Pemilik Kendaraan  YT",
+    "nik_masked": "3174640****8322",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Hitam",
+    "year": 2016,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9298 D": {
+    "owner_name": "Pemilik Kendaraan 8 D",
+    "nik_masked": "3173779****5650",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Silver",
+    "year": 2023,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 5295 NHQ": {
+    "owner_name": "Pemilik Kendaraan NHQ",
+    "nik_masked": "3177811****4001",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Merah",
+    "year": 2019,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 6523 E": {
+    "owner_name": "Pemilik Kendaraan 3 E",
+    "nik_masked": "3179306****6415",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Putih",
+    "year": 2019,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 3341 AQ": {
+    "owner_name": "Pemilik Kendaraan  AQ",
+    "nik_masked": "3179324****1392",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Hitam",
+    "year": 2024,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 7195 C": {
+    "owner_name": "Pemilik Kendaraan 5 C",
+    "nik_masked": "3177138****9212",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Silver",
+    "year": 2015,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9242 RB": {
+    "owner_name": "Pemilik Kendaraan  RB",
+    "nik_masked": "3177123****9278",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Putih",
+    "year": 2021,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 5786 KTU": {
+    "owner_name": "Pemilik Kendaraan KTU",
+    "nik_masked": "3172339****9289",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Merah",
+    "year": 2017,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2690 T": {
+    "owner_name": "Pemilik Kendaraan 0 T",
+    "nik_masked": "3176003****3894",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Putih",
+    "year": 2021,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 6533 WUY": {
+    "owner_name": "Pemilik Kendaraan WUY",
+    "nik_masked": "3175061****7939",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2024,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9690 LY": {
+    "owner_name": "Pemilik Kendaraan  LY",
+    "nik_masked": "3177935****1714",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2015,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 1672 DLA": {
+    "owner_name": "Pemilik Kendaraan DLA",
+    "nik_masked": "3176209****5876",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Hitam",
+    "year": 2019,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 9670 PJP": {
+    "owner_name": "Pemilik Kendaraan PJP",
+    "nik_masked": "3172963****2170",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Hitam",
+    "year": 2016,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 9994 C": {
+    "owner_name": "Pemilik Kendaraan 4 C",
+    "nik_masked": "3179136****8877",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Hitam",
+    "year": 2019,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 3591 QNP": {
+    "owner_name": "Pemilik Kendaraan QNP",
+    "nik_masked": "3179464****6472",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Biru",
+    "year": 2021,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 1458 N": {
+    "owner_name": "Pemilik Kendaraan 8 N",
+    "nik_masked": "3171300****9531",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Hitam",
+    "year": 2016,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 1472 V": {
+    "owner_name": "Pemilik Kendaraan 2 V",
+    "nik_masked": "3179106****1035",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Merah",
+    "year": 2018,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 4596 C": {
+    "owner_name": "Pemilik Kendaraan 6 C",
+    "nik_masked": "3171006****4954",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Merah",
+    "year": 2015,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9345 AGK": {
+    "owner_name": "Pemilik Kendaraan AGK",
+    "nik_masked": "3171741****1519",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Hitam",
+    "year": 2023,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 7847 T": {
+    "owner_name": "Pemilik Kendaraan 7 T",
+    "nik_masked": "3178114****7810",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Merah",
+    "year": 2019,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2216 JJ": {
+    "owner_name": "Pemilik Kendaraan  JJ",
+    "nik_masked": "3174664****6664",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Biru",
+    "year": 2016,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 8526 EN": {
+    "owner_name": "Pemilik Kendaraan  EN",
+    "nik_masked": "3177389****3440",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Hitam",
+    "year": 2020,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 7060 T": {
+    "owner_name": "Pemilik Kendaraan 0 T",
+    "nik_masked": "3177220****5273",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Hitam",
+    "year": 2015,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 6636 JH": {
+    "owner_name": "Pemilik Kendaraan  JH",
+    "nik_masked": "3177068****2578",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Hitam",
+    "year": 2022,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 2626 CLR": {
+    "owner_name": "Pemilik Kendaraan CLR",
+    "nik_masked": "3173002****6736",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Putih",
+    "year": 2016,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 8567 I": {
+    "owner_name": "Pemilik Kendaraan 7 I",
+    "nik_masked": "3174795****3458",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Biru",
+    "year": 2021,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 6673 M": {
+    "owner_name": "Pemilik Kendaraan 3 M",
+    "nik_masked": "3173759****5773",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Merah",
+    "year": 2020,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "BELUM_BAYAR"
+  },
+  "F 2239 LT": {
+    "owner_name": "Pemilik Kendaraan  LT",
+    "nik_masked": "3172568****4003",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Biru",
+    "year": 2015,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 9394 X": {
+    "owner_name": "Pemilik Kendaraan 4 X",
+    "nik_masked": "3176125****5381",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Hitam",
+    "year": 2021,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 7895 MKG": {
+    "owner_name": "Pemilik Kendaraan MKG",
+    "nik_masked": "3175925****7040",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Merah",
+    "year": 2015,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 3484 A": {
+    "owner_name": "Pemilik Kendaraan 4 A",
+    "nik_masked": "3176239****5389",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Hitam",
+    "year": 2015,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 4714 B": {
+    "owner_name": "Pemilik Kendaraan 4 B",
+    "nik_masked": "3176684****4426",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Hitam",
+    "year": 2019,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 1338 ARP": {
+    "owner_name": "Pemilik Kendaraan ARP",
+    "nik_masked": "3176299****9956",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Merah",
+    "year": 2019,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 1078 S": {
+    "owner_name": "Pemilik Kendaraan 8 S",
+    "nik_masked": "3171278****5376",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Putih",
+    "year": 2018,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 9787 DWY": {
+    "owner_name": "Pemilik Kendaraan DWY",
+    "nik_masked": "3173113****6449",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Silver",
+    "year": 2024,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 6965 ZP": {
+    "owner_name": "Pemilik Kendaraan  ZP",
+    "nik_masked": "3177344****4245",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2018,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2782 UKV": {
+    "owner_name": "Pemilik Kendaraan UKV",
+    "nik_masked": "3175560****8608",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Silver",
+    "year": 2021,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 3531 MPX": {
+    "owner_name": "Pemilik Kendaraan MPX",
+    "nik_masked": "3177607****1753",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Silver",
+    "year": 2018,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 9218 T": {
+    "owner_name": "Pemilik Kendaraan 8 T",
+    "nik_masked": "3171553****2211",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Merah",
+    "year": 2019,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 5041 WZ": {
+    "owner_name": "Pemilik Kendaraan  WZ",
+    "nik_masked": "3172736****3690",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Biru",
+    "year": 2016,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2812 NC": {
+    "owner_name": "Pemilik Kendaraan  NC",
+    "nik_masked": "3176450****1399",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Putih",
+    "year": 2020,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 9216 H": {
+    "owner_name": "Pemilik Kendaraan 6 H",
+    "nik_masked": "3174892****2226",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Merah",
+    "year": 2015,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 8561 E": {
+    "owner_name": "Pemilik Kendaraan 1 E",
+    "nik_masked": "3172298****9914",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2016,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 3867 CI": {
+    "owner_name": "Pemilik Kendaraan  CI",
+    "nik_masked": "3177518****3552",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Hitam",
+    "year": 2018,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 7694 LSZ": {
+    "owner_name": "Pemilik Kendaraan LSZ",
+    "nik_masked": "3176805****6947",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Biru",
+    "year": 2018,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 7933 LY": {
+    "owner_name": "Pemilik Kendaraan  LY",
+    "nik_masked": "3178938****6282",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Silver",
+    "year": 2015,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 2881 LQ": {
+    "owner_name": "Pemilik Kendaraan  LQ",
+    "nik_masked": "3176936****7240",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Biru",
+    "year": 2023,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 1232 J": {
+    "owner_name": "Pemilik Kendaraan 2 J",
+    "nik_masked": "3172459****8702",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Hitam",
+    "year": 2024,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 5759 FB": {
+    "owner_name": "Pemilik Kendaraan  FB",
+    "nik_masked": "3171959****1536",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2022,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "BELUM_BAYAR"
+  },
+  "F 3938 DNS": {
+    "owner_name": "Pemilik Kendaraan DNS",
+    "nik_masked": "3171471****7762",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Biru",
+    "year": 2018,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 8684 KS": {
+    "owner_name": "Pemilik Kendaraan  KS",
+    "nik_masked": "3177322****1079",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2016,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "BELUM_BAYAR"
+  },
+  "B 3343 F": {
+    "owner_name": "Pemilik Kendaraan 3 F",
+    "nik_masked": "3177490****9340",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Biru",
+    "year": 2019,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 5175 KTA": {
+    "owner_name": "Pemilik Kendaraan KTA",
+    "nik_masked": "3176177****2319",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Silver",
+    "year": 2020,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 4737 O": {
+    "owner_name": "Pemilik Kendaraan 7 O",
+    "nik_masked": "3175253****5956",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Hitam",
+    "year": 2017,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 7840 YBL": {
+    "owner_name": "Pemilik Kendaraan YBL",
+    "nik_masked": "3173929****6771",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Biru",
+    "year": 2023,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 7119 G": {
+    "owner_name": "Pemilik Kendaraan 9 G",
+    "nik_masked": "3172311****7630",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Biru",
+    "year": 2022,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9743 X": {
+    "owner_name": "Pemilik Kendaraan 3 X",
+    "nik_masked": "3176160****4790",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Silver",
+    "year": 2020,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7443 CYZ": {
+    "owner_name": "Pemilik Kendaraan CYZ",
+    "nik_masked": "3173941****2487",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Hitam",
+    "year": 2020,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 2498 XIR": {
+    "owner_name": "Pemilik Kendaraan XIR",
+    "nik_masked": "3177945****5578",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Hitam",
+    "year": 2019,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 5625 T": {
+    "owner_name": "Pemilik Kendaraan 5 T",
+    "nik_masked": "3173933****9837",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Biru",
+    "year": 2022,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 8728 X": {
+    "owner_name": "Pemilik Kendaraan 8 X",
+    "nik_masked": "3172971****5185",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Biru",
+    "year": 2023,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9082 GB": {
+    "owner_name": "Pemilik Kendaraan  GB",
+    "nik_masked": "3179748****6106",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Biru",
+    "year": 2022,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 3084 DQW": {
+    "owner_name": "Pemilik Kendaraan DQW",
+    "nik_masked": "3171104****4560",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Merah",
+    "year": 2021,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 6895 CZ": {
+    "owner_name": "Pemilik Kendaraan  CZ",
+    "nik_masked": "3179289****4099",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Putih",
+    "year": 2020,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 5237 L": {
+    "owner_name": "Pemilik Kendaraan 7 L",
+    "nik_masked": "3177149****5469",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2017,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 8053 UEX": {
+    "owner_name": "Pemilik Kendaraan UEX",
+    "nik_masked": "3175181****5986",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Biru",
+    "year": 2021,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 5402 KVS": {
+    "owner_name": "Pemilik Kendaraan KVS",
+    "nik_masked": "3173272****3095",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2019,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 4340 TQ": {
+    "owner_name": "Pemilik Kendaraan  TQ",
+    "nik_masked": "3174055****1898",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Biru",
+    "year": 2015,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 9255 KBI": {
+    "owner_name": "Pemilik Kendaraan KBI",
+    "nik_masked": "3175348****8275",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Silver",
+    "year": 2023,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2712 S": {
+    "owner_name": "Pemilik Kendaraan 2 S",
+    "nik_masked": "3178323****9623",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2016,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 8210 H": {
+    "owner_name": "Pemilik Kendaraan 0 H",
+    "nik_masked": "3171862****9313",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Merah",
+    "year": 2023,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 5463 H": {
+    "owner_name": "Pemilik Kendaraan 3 H",
+    "nik_masked": "3172331****6939",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Putih",
+    "year": 2015,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 9109 DYG": {
+    "owner_name": "Pemilik Kendaraan DYG",
+    "nik_masked": "3175507****2659",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Putih",
+    "year": 2022,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 8663 KLB": {
+    "owner_name": "Pemilik Kendaraan KLB",
+    "nik_masked": "3176198****2304",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Merah",
+    "year": 2015,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7730 PDV": {
+    "owner_name": "Pemilik Kendaraan PDV",
+    "nik_masked": "3178821****1861",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Biru",
+    "year": 2018,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 5887 N": {
+    "owner_name": "Pemilik Kendaraan 7 N",
+    "nik_masked": "3172823****9395",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Merah",
+    "year": 2024,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 3615 JK": {
+    "owner_name": "Pemilik Kendaraan  JK",
+    "nik_masked": "3175646****1629",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Merah",
+    "year": 2021,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 3265 D": {
+    "owner_name": "Pemilik Kendaraan 5 D",
+    "nik_masked": "3173554****6007",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Silver",
+    "year": 2015,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7594 JV": {
+    "owner_name": "Pemilik Kendaraan  JV",
+    "nik_masked": "3179519****7144",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Hitam",
+    "year": 2024,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 4756 PBW": {
+    "owner_name": "Pemilik Kendaraan PBW",
+    "nik_masked": "3173752****6964",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Merah",
+    "year": 2023,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 1526 C": {
+    "owner_name": "Pemilik Kendaraan 6 C",
+    "nik_masked": "3177556****5031",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Merah",
+    "year": 2015,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 8598 ODJ": {
+    "owner_name": "Pemilik Kendaraan ODJ",
+    "nik_masked": "3171435****7177",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Hitam",
+    "year": 2016,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "BELUM_BAYAR"
+  },
+  "D 7544 INC": {
+    "owner_name": "Pemilik Kendaraan INC",
+    "nik_masked": "3171732****4727",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Biru",
+    "year": 2018,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 2065 WN": {
+    "owner_name": "Pemilik Kendaraan  WN",
+    "nik_masked": "3177946****8082",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Silver",
+    "year": 2017,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 8043 WE": {
+    "owner_name": "Pemilik Kendaraan  WE",
+    "nik_masked": "3179170****6099",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Merah",
+    "year": 2018,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 3536 EWL": {
+    "owner_name": "Pemilik Kendaraan EWL",
+    "nik_masked": "3171691****8464",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Putih",
+    "year": 2015,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9710 LNF": {
+    "owner_name": "Pemilik Kendaraan LNF",
+    "nik_masked": "3173263****8587",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Biru",
+    "year": 2019,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 5292 SSU": {
+    "owner_name": "Pemilik Kendaraan SSU",
+    "nik_masked": "3176653****4522",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Biru",
+    "year": 2019,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 8085 Q": {
+    "owner_name": "Pemilik Kendaraan 5 Q",
+    "nik_masked": "3176204****8470",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2020,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 6167 GVK": {
+    "owner_name": "Pemilik Kendaraan GVK",
+    "nik_masked": "3178765****1710",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2024,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 6414 V": {
+    "owner_name": "Pemilik Kendaraan 4 V",
+    "nik_masked": "3177002****5410",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Putih",
+    "year": 2023,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 9875 KMJ": {
+    "owner_name": "Pemilik Kendaraan KMJ",
+    "nik_masked": "3179955****7442",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Merah",
+    "year": 2016,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 5933 WKC": {
+    "owner_name": "Pemilik Kendaraan WKC",
+    "nik_masked": "3173185****8316",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Silver",
+    "year": 2022,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 4619 MBI": {
+    "owner_name": "Pemilik Kendaraan MBI",
+    "nik_masked": "3173249****6914",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Merah",
+    "year": 2021,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 9214 ZMB": {
+    "owner_name": "Pemilik Kendaraan ZMB",
+    "nik_masked": "3171293****8746",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Merah",
+    "year": 2022,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 3232 YSS": {
+    "owner_name": "Pemilik Kendaraan YSS",
+    "nik_masked": "3171547****1242",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2022,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 5838 XI": {
+    "owner_name": "Pemilik Kendaraan  XI",
+    "nik_masked": "3175579****4764",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Merah",
+    "year": 2015,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 1886 M": {
+    "owner_name": "Pemilik Kendaraan 6 M",
+    "nik_masked": "3173108****5075",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Silver",
+    "year": 2017,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 1140 HB": {
+    "owner_name": "Pemilik Kendaraan  HB",
+    "nik_masked": "3179995****3188",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Merah",
+    "year": 2021,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 8219 BFE": {
+    "owner_name": "Pemilik Kendaraan BFE",
+    "nik_masked": "3172458****3492",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Hitam",
+    "year": 2023,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 6631 ZN": {
+    "owner_name": "Pemilik Kendaraan  ZN",
+    "nik_masked": "3173845****2255",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Hitam",
+    "year": 2018,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 4355 YSA": {
+    "owner_name": "Pemilik Kendaraan YSA",
+    "nik_masked": "3171062****3060",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Hitam",
+    "year": 2016,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 6982 B": {
+    "owner_name": "Pemilik Kendaraan 2 B",
+    "nik_masked": "3171460****1873",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Biru",
+    "year": 2019,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 2107 I": {
+    "owner_name": "Pemilik Kendaraan 7 I",
+    "nik_masked": "3178148****2738",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Merah",
+    "year": 2022,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 4236 IRC": {
+    "owner_name": "Pemilik Kendaraan IRC",
+    "nik_masked": "3178136****7872",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Putih",
+    "year": 2017,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 1548 O": {
+    "owner_name": "Pemilik Kendaraan 8 O",
+    "nik_masked": "3173353****4425",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Biru",
+    "year": 2024,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 3461 I": {
+    "owner_name": "Pemilik Kendaraan 1 I",
+    "nik_masked": "3178106****7588",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Putih",
+    "year": 2024,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 1326 X": {
+    "owner_name": "Pemilik Kendaraan 6 X",
+    "nik_masked": "3176391****1314",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Hitam",
+    "year": 2017,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 3615 EN": {
+    "owner_name": "Pemilik Kendaraan  EN",
+    "nik_masked": "3179666****3321",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Merah",
+    "year": 2016,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 2064 L": {
+    "owner_name": "Pemilik Kendaraan 4 L",
+    "nik_masked": "3174788****7217",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Hitam",
+    "year": 2019,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 3593 AYY": {
+    "owner_name": "Pemilik Kendaraan AYY",
+    "nik_masked": "3179396****9035",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Merah",
+    "year": 2021,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 6082 YV": {
+    "owner_name": "Pemilik Kendaraan  YV",
+    "nik_masked": "3171804****3368",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Merah",
+    "year": 2022,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 5395 A": {
+    "owner_name": "Pemilik Kendaraan 5 A",
+    "nik_masked": "3175933****5363",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Merah",
+    "year": 2024,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 3462 N": {
+    "owner_name": "Pemilik Kendaraan 2 N",
+    "nik_masked": "3177036****5815",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Silver",
+    "year": 2022,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 1283 H": {
+    "owner_name": "Pemilik Kendaraan 3 H",
+    "nik_masked": "3175535****8737",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Merah",
+    "year": 2018,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 3972 Q": {
+    "owner_name": "Pemilik Kendaraan 2 Q",
+    "nik_masked": "3174057****7108",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Silver",
+    "year": 2015,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 3785 P": {
+    "owner_name": "Pemilik Kendaraan 5 P",
+    "nik_masked": "3174871****1983",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Hitam",
+    "year": 2016,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 8437 YG": {
+    "owner_name": "Pemilik Kendaraan  YG",
+    "nik_masked": "3176829****4685",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Biru",
+    "year": 2016,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 3699 H": {
+    "owner_name": "Pemilik Kendaraan 9 H",
+    "nik_masked": "3176675****7200",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Silver",
+    "year": 2023,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 5537 RK": {
+    "owner_name": "Pemilik Kendaraan  RK",
+    "nik_masked": "3173869****4858",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Silver",
+    "year": 2022,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 1753 Y": {
+    "owner_name": "Pemilik Kendaraan 3 Y",
+    "nik_masked": "3177825****1157",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Biru",
+    "year": 2019,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 2123 XDB": {
+    "owner_name": "Pemilik Kendaraan XDB",
+    "nik_masked": "3172035****3102",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Silver",
+    "year": 2021,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 9214 ASF": {
+    "owner_name": "Pemilik Kendaraan ASF",
+    "nik_masked": "3173846****5792",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Putih",
+    "year": 2017,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 1317 K": {
+    "owner_name": "Pemilik Kendaraan 7 K",
+    "nik_masked": "3177319****4822",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Silver",
+    "year": 2024,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 5817 LEH": {
+    "owner_name": "Pemilik Kendaraan LEH",
+    "nik_masked": "3179074****7588",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Hitam",
+    "year": 2023,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 1965 SSC": {
+    "owner_name": "Pemilik Kendaraan SSC",
+    "nik_masked": "3172179****9747",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Merah",
+    "year": 2019,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 5182 XES": {
+    "owner_name": "Pemilik Kendaraan XES",
+    "nik_masked": "3177821****5327",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Hitam",
+    "year": 2016,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "BELUM_BAYAR"
+  },
+  "D 5454 XY": {
+    "owner_name": "Pemilik Kendaraan  XY",
+    "nik_masked": "3173766****6968",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2016,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 2514 XQJ": {
+    "owner_name": "Pemilik Kendaraan XQJ",
+    "nik_masked": "3179861****7940",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Silver",
+    "year": 2022,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 7027 DJS": {
+    "owner_name": "Pemilik Kendaraan DJS",
+    "nik_masked": "3173564****6199",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Merah",
+    "year": 2020,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 2218 J": {
+    "owner_name": "Pemilik Kendaraan 8 J",
+    "nik_masked": "3177551****6409",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Putih",
+    "year": 2015,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 5220 NUG": {
+    "owner_name": "Pemilik Kendaraan NUG",
+    "nik_masked": "3178483****9423",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Biru",
+    "year": 2017,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 7089 QV": {
+    "owner_name": "Pemilik Kendaraan  QV",
+    "nik_masked": "3179454****5356",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2018,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 1205 I": {
+    "owner_name": "Pemilik Kendaraan 5 I",
+    "nik_masked": "3173875****8580",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Hitam",
+    "year": 2017,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 4826 S": {
+    "owner_name": "Pemilik Kendaraan 6 S",
+    "nik_masked": "3177420****6913",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Hitam",
+    "year": 2021,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 6244 I": {
+    "owner_name": "Pemilik Kendaraan 4 I",
+    "nik_masked": "3174900****2549",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Merah",
+    "year": 2018,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 4329 FA": {
+    "owner_name": "Pemilik Kendaraan  FA",
+    "nik_masked": "3175674****6200",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2021,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 5918 EZ": {
+    "owner_name": "Pemilik Kendaraan  EZ",
+    "nik_masked": "3178775****8162",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Hitam",
+    "year": 2016,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "BELUM_BAYAR"
+  },
+  "B 2046 JN": {
+    "owner_name": "Pemilik Kendaraan  JN",
+    "nik_masked": "3171855****6044",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Silver",
+    "year": 2020,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 2928 E": {
+    "owner_name": "Pemilik Kendaraan 8 E",
+    "nik_masked": "3172367****8652",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Hitam",
+    "year": 2021,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 6029 YQE": {
+    "owner_name": "Pemilik Kendaraan YQE",
+    "nik_masked": "3175829****3593",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Putih",
+    "year": 2020,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 2468 M": {
+    "owner_name": "Pemilik Kendaraan 8 M",
+    "nik_masked": "3179373****3777",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Merah",
+    "year": 2022,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 1481 SU": {
+    "owner_name": "Pemilik Kendaraan  SU",
+    "nik_masked": "3177749****3891",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Biru",
+    "year": 2017,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7397 AS": {
+    "owner_name": "Pemilik Kendaraan  AS",
+    "nik_masked": "3178554****1678",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2019,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 9111 SVY": {
+    "owner_name": "Pemilik Kendaraan SVY",
+    "nik_masked": "3171058****1986",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Merah",
+    "year": 2019,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 8672 CZU": {
+    "owner_name": "Pemilik Kendaraan CZU",
+    "nik_masked": "3179256****3710",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Putih",
+    "year": 2016,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "BELUM_BAYAR"
+  },
+  "F 7817 KIE": {
+    "owner_name": "Pemilik Kendaraan KIE",
+    "nik_masked": "3175449****2762",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Merah",
+    "year": 2016,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 9807 LAX": {
+    "owner_name": "Pemilik Kendaraan LAX",
+    "nik_masked": "3174919****3324",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Merah",
+    "year": 2024,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2809 P": {
+    "owner_name": "Pemilik Kendaraan 9 P",
+    "nik_masked": "3178978****7054",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2019,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 5967 QR": {
+    "owner_name": "Pemilik Kendaraan  QR",
+    "nik_masked": "3174819****7904",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2020,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 6818 DD": {
+    "owner_name": "Pemilik Kendaraan  DD",
+    "nik_masked": "3179513****8607",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Putih",
+    "year": 2015,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7514 P": {
+    "owner_name": "Pemilik Kendaraan 4 P",
+    "nik_masked": "3173941****1146",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Biru",
+    "year": 2023,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 4204 UDD": {
+    "owner_name": "Pemilik Kendaraan UDD",
+    "nik_masked": "3178895****9918",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Hitam",
+    "year": 2021,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 8306 C": {
+    "owner_name": "Pemilik Kendaraan 6 C",
+    "nik_masked": "3174675****3844",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Hitam",
+    "year": 2019,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 5666 NW": {
+    "owner_name": "Pemilik Kendaraan  NW",
+    "nik_masked": "3174781****1634",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Putih",
+    "year": 2024,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9753 SG": {
+    "owner_name": "Pemilik Kendaraan  SG",
+    "nik_masked": "3177901****3737",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Biru",
+    "year": 2015,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 6501 VIV": {
+    "owner_name": "Pemilik Kendaraan VIV",
+    "nik_masked": "3171392****2288",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Silver",
+    "year": 2015,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 4636 KJ": {
+    "owner_name": "Pemilik Kendaraan  KJ",
+    "nik_masked": "3176396****9454",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Biru",
+    "year": 2022,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 3936 URL": {
+    "owner_name": "Pemilik Kendaraan URL",
+    "nik_masked": "3178830****6722",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Merah",
+    "year": 2024,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 9192 GW": {
+    "owner_name": "Pemilik Kendaraan  GW",
+    "nik_masked": "3178426****3089",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Hitam",
+    "year": 2017,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 2737 B": {
+    "owner_name": "Pemilik Kendaraan 7 B",
+    "nik_masked": "3172845****7112",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Putih",
+    "year": 2015,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 4392 XGW": {
+    "owner_name": "Pemilik Kendaraan XGW",
+    "nik_masked": "3171404****9883",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Silver",
+    "year": 2018,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9058 DW": {
+    "owner_name": "Pemilik Kendaraan  DW",
+    "nik_masked": "3177754****4557",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Merah",
+    "year": 2020,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 6699 TKX": {
+    "owner_name": "Pemilik Kendaraan TKX",
+    "nik_masked": "3171905****2191",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Merah",
+    "year": 2015,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 1235 GQV": {
+    "owner_name": "Pemilik Kendaraan GQV",
+    "nik_masked": "3175693****2036",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Merah",
+    "year": 2019,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 4387 NFM": {
+    "owner_name": "Pemilik Kendaraan NFM",
+    "nik_masked": "3173047****2443",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Hitam",
+    "year": 2018,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 6367 I": {
+    "owner_name": "Pemilik Kendaraan 7 I",
+    "nik_masked": "3179478****4597",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Putih",
+    "year": 2021,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "BELUM_BAYAR"
+  },
+  "F 7498 R": {
+    "owner_name": "Pemilik Kendaraan 8 R",
+    "nik_masked": "3172402****8246",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Biru",
+    "year": 2015,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 4622 SO": {
+    "owner_name": "Pemilik Kendaraan  SO",
+    "nik_masked": "3178468****9327",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Merah",
+    "year": 2016,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 1862 JL": {
+    "owner_name": "Pemilik Kendaraan  JL",
+    "nik_masked": "3176305****5971",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2020,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 9416 F": {
+    "owner_name": "Pemilik Kendaraan 6 F",
+    "nik_masked": "3177887****1660",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Biru",
+    "year": 2021,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 2119 KYX": {
+    "owner_name": "Pemilik Kendaraan KYX",
+    "nik_masked": "3179845****7082",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2021,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 5213 WP": {
+    "owner_name": "Pemilik Kendaraan  WP",
+    "nik_masked": "3171667****9911",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Silver",
+    "year": 2019,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 7234 CRM": {
+    "owner_name": "Pemilik Kendaraan CRM",
+    "nik_masked": "3177865****1977",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Hitam",
+    "year": 2024,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "BELUM_BAYAR"
+  },
+  "F 8491 PI": {
+    "owner_name": "Pemilik Kendaraan  PI",
+    "nik_masked": "3173517****5974",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Merah",
+    "year": 2022,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 3332 P": {
+    "owner_name": "Pemilik Kendaraan 2 P",
+    "nik_masked": "3171707****6153",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Hitam",
+    "year": 2019,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 4542 LR": {
+    "owner_name": "Pemilik Kendaraan  LR",
+    "nik_masked": "3173359****6758",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2021,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 2197 SGD": {
+    "owner_name": "Pemilik Kendaraan SGD",
+    "nik_masked": "3179763****3045",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Biru",
+    "year": 2019,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 1977 J": {
+    "owner_name": "Pemilik Kendaraan 7 J",
+    "nik_masked": "3172093****9799",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Biru",
+    "year": 2020,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "BELUM_BAYAR"
+  },
+  "B 6894 KI": {
+    "owner_name": "Pemilik Kendaraan  KI",
+    "nik_masked": "3175167****7543",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2015,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 8475 HXG": {
+    "owner_name": "Pemilik Kendaraan HXG",
+    "nik_masked": "3179647****3348",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Biru",
+    "year": 2022,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 6545 OLQ": {
+    "owner_name": "Pemilik Kendaraan OLQ",
+    "nik_masked": "3175104****2125",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Putih",
+    "year": 2018,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 8545 ZX": {
+    "owner_name": "Pemilik Kendaraan  ZX",
+    "nik_masked": "3171697****7369",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Merah",
+    "year": 2021,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 2333 ELN": {
+    "owner_name": "Pemilik Kendaraan ELN",
+    "nik_masked": "3172732****2991",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Merah",
+    "year": 2022,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 2554 X": {
+    "owner_name": "Pemilik Kendaraan 4 X",
+    "nik_masked": "3173179****1014",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Putih",
+    "year": 2018,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 8247 L": {
+    "owner_name": "Pemilik Kendaraan 7 L",
+    "nik_masked": "3175328****9390",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Putih",
+    "year": 2018,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 8176 EF": {
+    "owner_name": "Pemilik Kendaraan  EF",
+    "nik_masked": "3174008****5781",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Silver",
+    "year": 2022,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 5980 Z": {
+    "owner_name": "Pemilik Kendaraan 0 Z",
+    "nik_masked": "3172011****5021",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Hitam",
+    "year": 2018,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 5267 XS": {
+    "owner_name": "Pemilik Kendaraan  XS",
+    "nik_masked": "3177818****5960",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Merah",
+    "year": 2024,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 2751 S": {
+    "owner_name": "Pemilik Kendaraan 1 S",
+    "nik_masked": "3171280****2268",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Silver",
+    "year": 2015,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 5172 D": {
+    "owner_name": "Pemilik Kendaraan 2 D",
+    "nik_masked": "3177476****4617",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Silver",
+    "year": 2022,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 8451 PPL": {
+    "owner_name": "Pemilik Kendaraan PPL",
+    "nik_masked": "3176212****3039",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Hitam",
+    "year": 2017,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 2744 M": {
+    "owner_name": "Pemilik Kendaraan 4 M",
+    "nik_masked": "3174411****5738",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Putih",
+    "year": 2019,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2792 NS": {
+    "owner_name": "Pemilik Kendaraan  NS",
+    "nik_masked": "3178940****7140",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Silver",
+    "year": 2017,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 3709 P": {
+    "owner_name": "Pemilik Kendaraan 9 P",
+    "nik_masked": "3172905****3076",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Biru",
+    "year": 2018,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 4500 XY": {
+    "owner_name": "Pemilik Kendaraan  XY",
+    "nik_masked": "3178106****8250",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Hitam",
+    "year": 2023,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 8636 L": {
+    "owner_name": "Pemilik Kendaraan 6 L",
+    "nik_masked": "3179393****4687",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2018,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 1615 DOI": {
+    "owner_name": "Pemilik Kendaraan DOI",
+    "nik_masked": "3172187****3778",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Hitam",
+    "year": 2022,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2910 UOH": {
+    "owner_name": "Pemilik Kendaraan UOH",
+    "nik_masked": "3172715****3117",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Biru",
+    "year": 2017,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 1458 LY": {
+    "owner_name": "Pemilik Kendaraan  LY",
+    "nik_masked": "3175842****1442",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Putih",
+    "year": 2015,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 1679 OXB": {
+    "owner_name": "Pemilik Kendaraan OXB",
+    "nik_masked": "3176522****3885",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Silver",
+    "year": 2015,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "BELUM_BAYAR"
+  },
+  "D 1854 Q": {
+    "owner_name": "Pemilik Kendaraan 4 Q",
+    "nik_masked": "3176267****2460",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2024,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 4522 HWD": {
+    "owner_name": "Pemilik Kendaraan HWD",
+    "nik_masked": "3174012****4697",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Biru",
+    "year": 2021,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 4668 EJ": {
+    "owner_name": "Pemilik Kendaraan  EJ",
+    "nik_masked": "3172496****9707",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Silver",
+    "year": 2023,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 8405 PS": {
+    "owner_name": "Pemilik Kendaraan  PS",
+    "nik_masked": "3175214****8859",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2020,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 1103 R": {
+    "owner_name": "Pemilik Kendaraan 3 R",
+    "nik_masked": "3175894****1727",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Hitam",
+    "year": 2020,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 6526 QD": {
+    "owner_name": "Pemilik Kendaraan  QD",
+    "nik_masked": "3174753****4658",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2021,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 5011 K": {
+    "owner_name": "Pemilik Kendaraan 1 K",
+    "nik_masked": "3179682****4279",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Silver",
+    "year": 2017,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 5058 CU": {
+    "owner_name": "Pemilik Kendaraan  CU",
+    "nik_masked": "3175169****4572",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Hitam",
+    "year": 2021,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 6656 C": {
+    "owner_name": "Pemilik Kendaraan 6 C",
+    "nik_masked": "3176426****7120",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Biru",
+    "year": 2023,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 9477 JS": {
+    "owner_name": "Pemilik Kendaraan  JS",
+    "nik_masked": "3174201****5993",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Silver",
+    "year": 2022,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 1475 ORH": {
+    "owner_name": "Pemilik Kendaraan ORH",
+    "nik_masked": "3175724****5412",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Hitam",
+    "year": 2021,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 3791 WTH": {
+    "owner_name": "Pemilik Kendaraan WTH",
+    "nik_masked": "3173152****7358",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Merah",
+    "year": 2021,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 8951 OY": {
+    "owner_name": "Pemilik Kendaraan  OY",
+    "nik_masked": "3175953****8568",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Merah",
+    "year": 2018,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 1947 JP": {
+    "owner_name": "Pemilik Kendaraan  JP",
+    "nik_masked": "3177648****2061",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Merah",
+    "year": 2017,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 4570 ITZ": {
+    "owner_name": "Pemilik Kendaraan ITZ",
+    "nik_masked": "3174998****5890",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Merah",
+    "year": 2023,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 6957 D": {
+    "owner_name": "Pemilik Kendaraan 7 D",
+    "nik_masked": "3175266****6308",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Biru",
+    "year": 2016,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7042 I": {
+    "owner_name": "Pemilik Kendaraan 2 I",
+    "nik_masked": "3176008****4633",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Merah",
+    "year": 2017,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7572 SVM": {
+    "owner_name": "Pemilik Kendaraan SVM",
+    "nik_masked": "3172772****5267",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Putih",
+    "year": 2022,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2499 MI": {
+    "owner_name": "Pemilik Kendaraan  MI",
+    "nik_masked": "3174619****2202",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Biru",
+    "year": 2019,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 2432 AQT": {
+    "owner_name": "Pemilik Kendaraan AQT",
+    "nik_masked": "3174669****7670",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2016,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 3703 EG": {
+    "owner_name": "Pemilik Kendaraan  EG",
+    "nik_masked": "3176340****7859",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Hitam",
+    "year": 2020,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 1568 JQA": {
+    "owner_name": "Pemilik Kendaraan JQA",
+    "nik_masked": "3174629****2938",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Biru",
+    "year": 2020,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 4618 DX": {
+    "owner_name": "Pemilik Kendaraan  DX",
+    "nik_masked": "3178539****6823",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2017,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 2838 CN": {
+    "owner_name": "Pemilik Kendaraan  CN",
+    "nik_masked": "3173772****3633",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Silver",
+    "year": 2015,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9591 GFE": {
+    "owner_name": "Pemilik Kendaraan GFE",
+    "nik_masked": "3174643****3519",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Hitam",
+    "year": 2020,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 5231 RE": {
+    "owner_name": "Pemilik Kendaraan  RE",
+    "nik_masked": "3176694****5157",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2021,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2193 MJ": {
+    "owner_name": "Pemilik Kendaraan  MJ",
+    "nik_masked": "3174426****9141",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Merah",
+    "year": 2024,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 4309 E": {
+    "owner_name": "Pemilik Kendaraan 9 E",
+    "nik_masked": "3178627****2755",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Silver",
+    "year": 2021,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 1267 J": {
+    "owner_name": "Pemilik Kendaraan 7 J",
+    "nik_masked": "3177545****7540",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Putih",
+    "year": 2018,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 4656 KE": {
+    "owner_name": "Pemilik Kendaraan  KE",
+    "nik_masked": "3172987****1893",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Merah",
+    "year": 2024,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 4210 OB": {
+    "owner_name": "Pemilik Kendaraan  OB",
+    "nik_masked": "3177804****2718",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2018,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 1402 RS": {
+    "owner_name": "Pemilik Kendaraan  RS",
+    "nik_masked": "3173380****5557",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2024,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 3830 P": {
+    "owner_name": "Pemilik Kendaraan 0 P",
+    "nik_masked": "3172030****9313",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Putih",
+    "year": 2021,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 3831 EB": {
+    "owner_name": "Pemilik Kendaraan  EB",
+    "nik_masked": "3178567****1801",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Silver",
+    "year": 2018,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 2953 WAC": {
+    "owner_name": "Pemilik Kendaraan WAC",
+    "nik_masked": "3177738****7750",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Silver",
+    "year": 2016,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 1893 VHF": {
+    "owner_name": "Pemilik Kendaraan VHF",
+    "nik_masked": "3179124****6802",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Silver",
+    "year": 2023,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 6136 KD": {
+    "owner_name": "Pemilik Kendaraan  KD",
+    "nik_masked": "3176644****6782",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Biru",
+    "year": 2015,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 4158 OMW": {
+    "owner_name": "Pemilik Kendaraan OMW",
+    "nik_masked": "3178994****3502",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Hitam",
+    "year": 2015,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 2648 P": {
+    "owner_name": "Pemilik Kendaraan 8 P",
+    "nik_masked": "3173704****9478",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2015,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 1309 ZIF": {
+    "owner_name": "Pemilik Kendaraan ZIF",
+    "nik_masked": "3175650****3802",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Silver",
+    "year": 2020,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 8822 UX": {
+    "owner_name": "Pemilik Kendaraan  UX",
+    "nik_masked": "3174607****2289",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Hitam",
+    "year": 2019,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 4997 ZZ": {
+    "owner_name": "Pemilik Kendaraan  ZZ",
+    "nik_masked": "3171902****4070",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Merah",
+    "year": 2017,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 3946 KLV": {
+    "owner_name": "Pemilik Kendaraan KLV",
+    "nik_masked": "3176029****5206",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2015,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 1921 HVC": {
+    "owner_name": "Pemilik Kendaraan HVC",
+    "nik_masked": "3172850****6320",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Silver",
+    "year": 2020,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9744 JYX": {
+    "owner_name": "Pemilik Kendaraan JYX",
+    "nik_masked": "3172941****2949",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Putih",
+    "year": 2018,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 9381 BLO": {
+    "owner_name": "Pemilik Kendaraan BLO",
+    "nik_masked": "3175094****6158",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Putih",
+    "year": 2024,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7453 H": {
+    "owner_name": "Pemilik Kendaraan 3 H",
+    "nik_masked": "3176879****1291",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2015,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 1689 RX": {
+    "owner_name": "Pemilik Kendaraan  RX",
+    "nik_masked": "3177691****1781",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Silver",
+    "year": 2022,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2657 KI": {
+    "owner_name": "Pemilik Kendaraan  KI",
+    "nik_masked": "3174528****1716",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2018,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 1027 Q": {
+    "owner_name": "Pemilik Kendaraan 7 Q",
+    "nik_masked": "3175682****4964",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Putih",
+    "year": 2018,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 1018 R": {
+    "owner_name": "Pemilik Kendaraan 8 R",
+    "nik_masked": "3172266****3781",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Biru",
+    "year": 2017,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 8481 PP": {
+    "owner_name": "Pemilik Kendaraan  PP",
+    "nik_masked": "3173620****5121",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2018,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 7542 GY": {
+    "owner_name": "Pemilik Kendaraan  GY",
+    "nik_masked": "3177999****3880",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Hitam",
+    "year": 2017,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 6927 UA": {
+    "owner_name": "Pemilik Kendaraan  UA",
+    "nik_masked": "3171141****5431",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Hitam",
+    "year": 2019,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 8249 Y": {
+    "owner_name": "Pemilik Kendaraan 9 Y",
+    "nik_masked": "3171335****4782",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2022,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 8849 TUE": {
+    "owner_name": "Pemilik Kendaraan TUE",
+    "nik_masked": "3172959****4178",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Merah",
+    "year": 2020,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 1619 HTO": {
+    "owner_name": "Pemilik Kendaraan HTO",
+    "nik_masked": "3175025****2311",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Silver",
+    "year": 2016,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 3324 NIZ": {
+    "owner_name": "Pemilik Kendaraan NIZ",
+    "nik_masked": "3171985****9607",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Hitam",
+    "year": 2020,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2442 M": {
+    "owner_name": "Pemilik Kendaraan 2 M",
+    "nik_masked": "3179725****8049",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Merah",
+    "year": 2019,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9083 S": {
+    "owner_name": "Pemilik Kendaraan 3 S",
+    "nik_masked": "3176553****9714",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Biru",
+    "year": 2017,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 7049 H": {
+    "owner_name": "Pemilik Kendaraan 9 H",
+    "nik_masked": "3173982****4800",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Merah",
+    "year": 2017,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9742 COA": {
+    "owner_name": "Pemilik Kendaraan COA",
+    "nik_masked": "3173374****4869",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Merah",
+    "year": 2023,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 1706 Z": {
+    "owner_name": "Pemilik Kendaraan 6 Z",
+    "nik_masked": "3176100****4640",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Silver",
+    "year": 2024,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 6332 OQQ": {
+    "owner_name": "Pemilik Kendaraan OQQ",
+    "nik_masked": "3176106****5988",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Biru",
+    "year": 2019,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "BELUM_BAYAR"
+  },
+  "D 9417 WYV": {
+    "owner_name": "Pemilik Kendaraan WYV",
+    "nik_masked": "3175032****2961",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Putih",
+    "year": 2015,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 5723 D": {
+    "owner_name": "Pemilik Kendaraan 3 D",
+    "nik_masked": "3179367****3517",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Putih",
+    "year": 2017,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 1035 X": {
+    "owner_name": "Pemilik Kendaraan 5 X",
+    "nik_masked": "3171020****3080",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Putih",
+    "year": 2024,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 8820 L": {
+    "owner_name": "Pemilik Kendaraan 0 L",
+    "nik_masked": "3172392****4747",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Merah",
+    "year": 2017,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "BELUM_BAYAR"
+  },
+  "F 4884 TCR": {
+    "owner_name": "Pemilik Kendaraan TCR",
+    "nik_masked": "3173742****9359",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2024,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 5485 B": {
+    "owner_name": "Pemilik Kendaraan 5 B",
+    "nik_masked": "3175753****6881",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Hitam",
+    "year": 2023,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 2249 YSO": {
+    "owner_name": "Pemilik Kendaraan YSO",
+    "nik_masked": "3178336****4653",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Biru",
+    "year": 2016,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 5678 HNH": {
+    "owner_name": "Pemilik Kendaraan HNH",
+    "nik_masked": "3173178****6847",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Hitam",
+    "year": 2017,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 5678 AB": {
+    "owner_name": "Pemilik Kendaraan  AB",
+    "nik_masked": "3179934****3966",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Putih",
+    "year": 2016,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 1193 MPR": {
+    "owner_name": "Pemilik Kendaraan MPR",
+    "nik_masked": "3178004****4191",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Merah",
+    "year": 2016,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 5403 MF": {
+    "owner_name": "Pemilik Kendaraan  MF",
+    "nik_masked": "3172254****9577",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2023,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 4618 OF": {
+    "owner_name": "Pemilik Kendaraan  OF",
+    "nik_masked": "3177780****3667",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2024,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 1315 QZ": {
+    "owner_name": "Pemilik Kendaraan  QZ",
+    "nik_masked": "3177718****7723",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Merah",
+    "year": 2021,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 8766 NL": {
+    "owner_name": "Pemilik Kendaraan  NL",
+    "nik_masked": "3178292****8306",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Silver",
+    "year": 2019,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 5271 S": {
+    "owner_name": "Pemilik Kendaraan 1 S",
+    "nik_masked": "3176969****7819",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Merah",
+    "year": 2022,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 2497 Z": {
+    "owner_name": "Pemilik Kendaraan 7 Z",
+    "nik_masked": "3176990****6404",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Hitam",
+    "year": 2023,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 9685 ASB": {
+    "owner_name": "Pemilik Kendaraan ASB",
+    "nik_masked": "3178646****9034",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Hitam",
+    "year": 2015,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 6587 I": {
+    "owner_name": "Pemilik Kendaraan 7 I",
+    "nik_masked": "3177699****6037",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Putih",
+    "year": 2017,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 7848 T": {
+    "owner_name": "Pemilik Kendaraan 8 T",
+    "nik_masked": "3175802****3399",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Merah",
+    "year": 2021,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 5733 NN": {
+    "owner_name": "Pemilik Kendaraan  NN",
+    "nik_masked": "3171146****5678",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Merah",
+    "year": 2022,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 8406 E": {
+    "owner_name": "Pemilik Kendaraan 6 E",
+    "nik_masked": "3172552****5532",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Merah",
+    "year": 2018,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 8987 UAQ": {
+    "owner_name": "Pemilik Kendaraan UAQ",
+    "nik_masked": "3175251****6338",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Merah",
+    "year": 2021,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 2170 AI": {
+    "owner_name": "Pemilik Kendaraan  AI",
+    "nik_masked": "3174687****8610",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Hitam",
+    "year": 2022,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 1868 DUF": {
+    "owner_name": "Pemilik Kendaraan DUF",
+    "nik_masked": "3174539****8897",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Hitam",
+    "year": 2019,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7374 JJ": {
+    "owner_name": "Pemilik Kendaraan  JJ",
+    "nik_masked": "3171925****3376",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Putih",
+    "year": 2022,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 8589 HNM": {
+    "owner_name": "Pemilik Kendaraan HNM",
+    "nik_masked": "3175356****2795",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Hitam",
+    "year": 2016,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 9355 ORE": {
+    "owner_name": "Pemilik Kendaraan ORE",
+    "nik_masked": "3174431****5782",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2015,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 6132 FE": {
+    "owner_name": "Pemilik Kendaraan  FE",
+    "nik_masked": "3176951****7878",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2024,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7378 I": {
+    "owner_name": "Pemilik Kendaraan 8 I",
+    "nik_masked": "3177924****2840",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Biru",
+    "year": 2018,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 7758 SM": {
+    "owner_name": "Pemilik Kendaraan  SM",
+    "nik_masked": "3174690****8500",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Hitam",
+    "year": 2019,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 5207 UI": {
+    "owner_name": "Pemilik Kendaraan  UI",
+    "nik_masked": "3172896****5823",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Hitam",
+    "year": 2021,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 8123 O": {
+    "owner_name": "Pemilik Kendaraan 3 O",
+    "nik_masked": "3174385****4040",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Hitam",
+    "year": 2017,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 2899 LLS": {
+    "owner_name": "Pemilik Kendaraan LLS",
+    "nik_masked": "3174621****5667",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2019,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 2059 RXT": {
+    "owner_name": "Pemilik Kendaraan RXT",
+    "nik_masked": "3179303****8937",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Hitam",
+    "year": 2021,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 3659 C": {
+    "owner_name": "Pemilik Kendaraan 9 C",
+    "nik_masked": "3179559****6037",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Biru",
+    "year": 2018,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 8244 U": {
+    "owner_name": "Pemilik Kendaraan 4 U",
+    "nik_masked": "3173275****6579",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Putih",
+    "year": 2016,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "BELUM_BAYAR"
+  },
+  "B 1594 NBO": {
+    "owner_name": "Pemilik Kendaraan NBO",
+    "nik_masked": "3177988****1763",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Putih",
+    "year": 2018,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 8868 U": {
+    "owner_name": "Pemilik Kendaraan 8 U",
+    "nik_masked": "3171294****1483",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2021,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2631 A": {
+    "owner_name": "Pemilik Kendaraan 1 A",
+    "nik_masked": "3174444****1151",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Hitam",
+    "year": 2017,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7567 C": {
+    "owner_name": "Pemilik Kendaraan 7 C",
+    "nik_masked": "3171314****2288",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Putih",
+    "year": 2020,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 2571 HP": {
+    "owner_name": "Pemilik Kendaraan  HP",
+    "nik_masked": "3179789****5068",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Hitam",
+    "year": 2016,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 3560 YQD": {
+    "owner_name": "Pemilik Kendaraan YQD",
+    "nik_masked": "3173255****3752",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Hitam",
+    "year": 2017,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 8344 R": {
+    "owner_name": "Pemilik Kendaraan 4 R",
+    "nik_masked": "3179429****7405",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Putih",
+    "year": 2019,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 6380 YN": {
+    "owner_name": "Pemilik Kendaraan  YN",
+    "nik_masked": "3171556****4814",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Silver",
+    "year": 2019,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7416 KX": {
+    "owner_name": "Pemilik Kendaraan  KX",
+    "nik_masked": "3179722****6694",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Merah",
+    "year": 2015,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 1803 Q": {
+    "owner_name": "Pemilik Kendaraan 3 Q",
+    "nik_masked": "3172153****9837",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Silver",
+    "year": 2017,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 9213 SM": {
+    "owner_name": "Pemilik Kendaraan  SM",
+    "nik_masked": "3173924****7956",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Merah",
+    "year": 2023,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 3196 I": {
+    "owner_name": "Pemilik Kendaraan 6 I",
+    "nik_masked": "3177433****8935",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Putih",
+    "year": 2021,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 9458 NCP": {
+    "owner_name": "Pemilik Kendaraan NCP",
+    "nik_masked": "3173570****3806",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Hitam",
+    "year": 2022,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 4987 HXL": {
+    "owner_name": "Pemilik Kendaraan HXL",
+    "nik_masked": "3179704****1346",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Merah",
+    "year": 2024,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 1005 KWC": {
+    "owner_name": "Pemilik Kendaraan KWC",
+    "nik_masked": "3178568****3725",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Merah",
+    "year": 2015,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 4040 NM": {
+    "owner_name": "Pemilik Kendaraan  NM",
+    "nik_masked": "3177117****6328",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Putih",
+    "year": 2023,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 8367 A": {
+    "owner_name": "Pemilik Kendaraan 7 A",
+    "nik_masked": "3172946****4297",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Merah",
+    "year": 2016,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 3453 D": {
+    "owner_name": "Pemilik Kendaraan 3 D",
+    "nik_masked": "3172641****5300",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Merah",
+    "year": 2016,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 9387 LB": {
+    "owner_name": "Pemilik Kendaraan  LB",
+    "nik_masked": "3174205****2629",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Merah",
+    "year": 2016,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 7724 A": {
+    "owner_name": "Pemilik Kendaraan 4 A",
+    "nik_masked": "3174570****9192",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2015,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9722 WL": {
+    "owner_name": "Pemilik Kendaraan  WL",
+    "nik_masked": "3171470****3689",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Hitam",
+    "year": 2023,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 7383 SN": {
+    "owner_name": "Pemilik Kendaraan  SN",
+    "nik_masked": "3172394****4224",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Putih",
+    "year": 2022,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 4304 Y": {
+    "owner_name": "Pemilik Kendaraan 4 Y",
+    "nik_masked": "3171327****9618",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Putih",
+    "year": 2021,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 6845 MXE": {
+    "owner_name": "Pemilik Kendaraan MXE",
+    "nik_masked": "3171997****1339",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Silver",
+    "year": 2024,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 8625 M": {
+    "owner_name": "Pemilik Kendaraan 5 M",
+    "nik_masked": "3172264****1315",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Hitam",
+    "year": 2020,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 2387 J": {
+    "owner_name": "Pemilik Kendaraan 7 J",
+    "nik_masked": "3175032****3592",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Biru",
+    "year": 2022,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 8966 NTD": {
+    "owner_name": "Pemilik Kendaraan NTD",
+    "nik_masked": "3179305****4929",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Biru",
+    "year": 2024,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 7486 TE": {
+    "owner_name": "Pemilik Kendaraan  TE",
+    "nik_masked": "3173882****9030",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Merah",
+    "year": 2017,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 2530 AG": {
+    "owner_name": "Pemilik Kendaraan  AG",
+    "nik_masked": "3172528****9945",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Merah",
+    "year": 2021,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 8060 L": {
+    "owner_name": "Pemilik Kendaraan 0 L",
+    "nik_masked": "3176376****9823",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Hitam",
+    "year": 2023,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 1176 HQB": {
+    "owner_name": "Pemilik Kendaraan HQB",
+    "nik_masked": "3176348****3280",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Silver",
+    "year": 2024,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7854 H": {
+    "owner_name": "Pemilik Kendaraan 4 H",
+    "nik_masked": "3175897****9157",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Biru",
+    "year": 2024,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 4466 PFJ": {
+    "owner_name": "Pemilik Kendaraan PFJ",
+    "nik_masked": "3174262****6898",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Silver",
+    "year": 2023,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 1909 X": {
+    "owner_name": "Pemilik Kendaraan 9 X",
+    "nik_masked": "3174242****2239",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Hitam",
+    "year": 2022,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 8241 MOU": {
+    "owner_name": "Pemilik Kendaraan MOU",
+    "nik_masked": "3173827****9365",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Merah",
+    "year": 2019,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 8569 PK": {
+    "owner_name": "Pemilik Kendaraan  PK",
+    "nik_masked": "3176452****2410",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Biru",
+    "year": 2024,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2813 APJ": {
+    "owner_name": "Pemilik Kendaraan APJ",
+    "nik_masked": "3178087****1267",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2023,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 8901 UKG": {
+    "owner_name": "Pemilik Kendaraan UKG",
+    "nik_masked": "3179744****1196",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Merah",
+    "year": 2019,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 5176 WHG": {
+    "owner_name": "Pemilik Kendaraan WHG",
+    "nik_masked": "3173550****8288",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2018,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7528 RWY": {
+    "owner_name": "Pemilik Kendaraan RWY",
+    "nik_masked": "3176499****4176",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Hitam",
+    "year": 2016,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 9662 JQ": {
+    "owner_name": "Pemilik Kendaraan  JQ",
+    "nik_masked": "3175771****2950",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Silver",
+    "year": 2021,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 8829 DH": {
+    "owner_name": "Pemilik Kendaraan  DH",
+    "nik_masked": "3172745****1032",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Hitam",
+    "year": 2019,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 5934 DK": {
+    "owner_name": "Pemilik Kendaraan  DK",
+    "nik_masked": "3171165****6451",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2021,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 4746 OK": {
+    "owner_name": "Pemilik Kendaraan  OK",
+    "nik_masked": "3173794****3547",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Merah",
+    "year": 2018,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 8822 D": {
+    "owner_name": "Pemilik Kendaraan 2 D",
+    "nik_masked": "3173759****7058",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Silver",
+    "year": 2017,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 8398 DRA": {
+    "owner_name": "Pemilik Kendaraan DRA",
+    "nik_masked": "3179747****9242",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Merah",
+    "year": 2016,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 7971 SS": {
+    "owner_name": "Pemilik Kendaraan  SS",
+    "nik_masked": "3176031****6914",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2020,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 1344 Y": {
+    "owner_name": "Pemilik Kendaraan 4 Y",
+    "nik_masked": "3176342****9865",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Putih",
+    "year": 2016,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 8499 S": {
+    "owner_name": "Pemilik Kendaraan 9 S",
+    "nik_masked": "3173518****3150",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Biru",
+    "year": 2015,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 5457 WC": {
+    "owner_name": "Pemilik Kendaraan  WC",
+    "nik_masked": "3172194****6211",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Silver",
+    "year": 2018,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9782 CD": {
+    "owner_name": "Pemilik Kendaraan  CD",
+    "nik_masked": "3178260****8238",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Biru",
+    "year": 2020,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7878 AMB": {
+    "owner_name": "Pemilik Kendaraan AMB",
+    "nik_masked": "3172442****2105",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Biru",
+    "year": 2015,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2435 HV": {
+    "owner_name": "Pemilik Kendaraan  HV",
+    "nik_masked": "3172848****3985",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Hitam",
+    "year": 2021,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 7510 CVG": {
+    "owner_name": "Pemilik Kendaraan CVG",
+    "nik_masked": "3176675****4962",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2021,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 3697 M": {
+    "owner_name": "Pemilik Kendaraan 7 M",
+    "nik_masked": "3179847****7550",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Hitam",
+    "year": 2024,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 7536 Y": {
+    "owner_name": "Pemilik Kendaraan 6 Y",
+    "nik_masked": "3178046****4052",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2016,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7029 PZF": {
+    "owner_name": "Pemilik Kendaraan PZF",
+    "nik_masked": "3179850****2460",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Putih",
+    "year": 2017,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 6780 ZX": {
+    "owner_name": "Pemilik Kendaraan  ZX",
+    "nik_masked": "3175907****9857",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Biru",
+    "year": 2017,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 1000 RSD": {
+    "owner_name": "Pemilik Kendaraan RSD",
+    "nik_masked": "3175062****9349",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2023,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7024 FK": {
+    "owner_name": "Pemilik Kendaraan  FK",
+    "nik_masked": "3175600****8212",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Merah",
+    "year": 2020,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 5967 QN": {
+    "owner_name": "Pemilik Kendaraan  QN",
+    "nik_masked": "3172167****1348",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Merah",
+    "year": 2019,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 3233 LB": {
+    "owner_name": "Pemilik Kendaraan  LB",
+    "nik_masked": "3179563****7141",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2024,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 1651 LLR": {
+    "owner_name": "Pemilik Kendaraan LLR",
+    "nik_masked": "3178099****4518",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Biru",
+    "year": 2022,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 9908 ET": {
+    "owner_name": "Pemilik Kendaraan  ET",
+    "nik_masked": "3174122****7073",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Putih",
+    "year": 2024,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9080 BG": {
+    "owner_name": "Pemilik Kendaraan  BG",
+    "nik_masked": "3172624****7557",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Biru",
+    "year": 2017,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 2647 Z": {
+    "owner_name": "Pemilik Kendaraan 7 Z",
+    "nik_masked": "3179856****3209",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2023,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2147 SI": {
+    "owner_name": "Pemilik Kendaraan  SI",
+    "nik_masked": "3176935****3882",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Merah",
+    "year": 2017,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 3926 PO": {
+    "owner_name": "Pemilik Kendaraan  PO",
+    "nik_masked": "3173774****2863",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2024,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 9976 K": {
+    "owner_name": "Pemilik Kendaraan 6 K",
+    "nik_masked": "3174008****5862",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Merah",
+    "year": 2019,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 2864 R": {
+    "owner_name": "Pemilik Kendaraan 4 R",
+    "nik_masked": "3177158****1801",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Biru",
+    "year": 2019,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 8180 M": {
+    "owner_name": "Pemilik Kendaraan 0 M",
+    "nik_masked": "3179846****4168",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Biru",
+    "year": 2022,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 6399 IID": {
+    "owner_name": "Pemilik Kendaraan IID",
+    "nik_masked": "3178053****2995",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Biru",
+    "year": 2017,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 6904 F": {
+    "owner_name": "Pemilik Kendaraan 4 F",
+    "nik_masked": "3172594****9407",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Putih",
+    "year": 2015,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 1095 K": {
+    "owner_name": "Pemilik Kendaraan 5 K",
+    "nik_masked": "3173938****2669",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Hitam",
+    "year": 2016,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 1000 DM": {
+    "owner_name": "Pemilik Kendaraan  DM",
+    "nik_masked": "3172066****9083",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Hitam",
+    "year": 2024,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 5111 Z": {
+    "owner_name": "Pemilik Kendaraan 1 Z",
+    "nik_masked": "3173539****9561",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Silver",
+    "year": 2022,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 4433 HXQ": {
+    "owner_name": "Pemilik Kendaraan HXQ",
+    "nik_masked": "3175042****8371",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Putih",
+    "year": 2015,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "D 9994 WQR": {
+    "owner_name": "Pemilik Kendaraan WQR",
+    "nik_masked": "3171913****6553",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Merah",
+    "year": 2023,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 5945 P": {
+    "owner_name": "Pemilik Kendaraan 5 P",
+    "nik_masked": "3171393****6794",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Putih",
+    "year": 2018,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 5495 LI": {
+    "owner_name": "Pemilik Kendaraan  LI",
+    "nik_masked": "3178918****1696",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2018,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 3308 UG": {
+    "owner_name": "Pemilik Kendaraan  UG",
+    "nik_masked": "3177475****8836",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Hitam",
+    "year": 2020,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9952 QO": {
+    "owner_name": "Pemilik Kendaraan  QO",
+    "nik_masked": "3171558****5835",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2020,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 4611 LMI": {
+    "owner_name": "Pemilik Kendaraan LMI",
+    "nik_masked": "3173698****9412",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Silver",
+    "year": 2017,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 2530 C": {
+    "owner_name": "Pemilik Kendaraan 0 C",
+    "nik_masked": "3174931****4821",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Silver",
+    "year": 2018,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 8198 W": {
+    "owner_name": "Pemilik Kendaraan 8 W",
+    "nik_masked": "3172603****9287",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Putih",
+    "year": 2015,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 2936 PS": {
+    "owner_name": "Pemilik Kendaraan  PS",
+    "nik_masked": "3173303****8146",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Putih",
+    "year": 2018,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 1421 NUU": {
+    "owner_name": "Pemilik Kendaraan NUU",
+    "nik_masked": "3176311****1586",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Putih",
+    "year": 2016,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 6952 FAY": {
+    "owner_name": "Pemilik Kendaraan FAY",
+    "nik_masked": "3177354****8194",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Putih",
+    "year": 2019,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 8072 Y": {
+    "owner_name": "Pemilik Kendaraan 2 Y",
+    "nik_masked": "3175907****7935",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Biru",
+    "year": 2023,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9714 OI": {
+    "owner_name": "Pemilik Kendaraan  OI",
+    "nik_masked": "3177923****6098",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Hitam",
+    "year": 2024,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 1176 UP": {
+    "owner_name": "Pemilik Kendaraan  UP",
+    "nik_masked": "3173505****3643",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Merah",
+    "year": 2021,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 6809 M": {
+    "owner_name": "Pemilik Kendaraan 9 M",
+    "nik_masked": "3179171****1180",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Hitam",
+    "year": 2017,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 6549 S": {
+    "owner_name": "Pemilik Kendaraan 9 S",
+    "nik_masked": "3176156****7989",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Biru",
+    "year": 2017,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 5832 K": {
+    "owner_name": "Pemilik Kendaraan 2 K",
+    "nik_masked": "3175620****4588",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Merah",
+    "year": 2020,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 5308 W": {
+    "owner_name": "Pemilik Kendaraan 8 W",
+    "nik_masked": "3178335****9348",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Putih",
+    "year": 2020,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 7750 PKS": {
+    "owner_name": "Pemilik Kendaraan PKS",
+    "nik_masked": "3172318****2375",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Putih",
+    "year": 2024,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 1992 WN": {
+    "owner_name": "Pemilik Kendaraan  WN",
+    "nik_masked": "3178530****7679",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Biru",
+    "year": 2021,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 1854 MWG": {
+    "owner_name": "Pemilik Kendaraan MWG",
+    "nik_masked": "3171278****8290",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Hitam",
+    "year": 2023,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 3340 J": {
+    "owner_name": "Pemilik Kendaraan 0 J",
+    "nik_masked": "3174130****2977",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Merah",
+    "year": 2023,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 2958 M": {
+    "owner_name": "Pemilik Kendaraan 8 M",
+    "nik_masked": "3178522****4083",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Putih",
+    "year": 2024,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 5466 TSN": {
+    "owner_name": "Pemilik Kendaraan TSN",
+    "nik_masked": "3177430****6374",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Biru",
+    "year": 2016,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 6715 VK": {
+    "owner_name": "Pemilik Kendaraan  VK",
+    "nik_masked": "3176176****7547",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Putih",
+    "year": 2023,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 8975 MX": {
+    "owner_name": "Pemilik Kendaraan  MX",
+    "nik_masked": "3173305****1108",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Biru",
+    "year": 2024,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 5607 ODJ": {
+    "owner_name": "Pemilik Kendaraan ODJ",
+    "nik_masked": "3177209****6835",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Silver",
+    "year": 2018,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 5198 IH": {
+    "owner_name": "Pemilik Kendaraan  IH",
+    "nik_masked": "3175436****6980",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Merah",
+    "year": 2022,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2416 UN": {
+    "owner_name": "Pemilik Kendaraan  UN",
+    "nik_masked": "3171165****6198",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Putih",
+    "year": 2021,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 4964 PTS": {
+    "owner_name": "Pemilik Kendaraan PTS",
+    "nik_masked": "3175388****3251",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Silver",
+    "year": 2015,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 2547 HB": {
+    "owner_name": "Pemilik Kendaraan  HB",
+    "nik_masked": "3172361****4034",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Hitam",
+    "year": 2017,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 6039 WVX": {
+    "owner_name": "Pemilik Kendaraan WVX",
+    "nik_masked": "3175576****1534",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Putih",
+    "year": 2024,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 4269 AY": {
+    "owner_name": "Pemilik Kendaraan  AY",
+    "nik_masked": "3176941****1200",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Hitam",
+    "year": 2018,
+    "stnk_expiry": "2026-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 1168 ZN": {
+    "owner_name": "Pemilik Kendaraan  ZN",
+    "nik_masked": "3178643****6054",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Merah",
+    "year": 2020,
+    "stnk_expiry": "2027-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 9632 LI": {
+    "owner_name": "Pemilik Kendaraan  LI",
+    "nik_masked": "3171903****4157",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Avanza",
+    "vehicle_color": "Merah",
+    "year": 2022,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 3011 I": {
+    "owner_name": "Pemilik Kendaraan 1 I",
+    "nik_masked": "3174071****2226",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Silver",
+    "year": 2019,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "B 7110 R": {
+    "owner_name": "Pemilik Kendaraan 0 R",
+    "nik_masked": "3175588****2562",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Hitam",
+    "year": 2018,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 9034 TXV": {
+    "owner_name": "Pemilik Kendaraan TXV",
+    "nik_masked": "3175046****3337",
+    "vehicle_brand": "Suzuki",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Putih",
+    "year": 2019,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 3822 MX": {
+    "owner_name": "Pemilik Kendaraan  MX",
+    "nik_masked": "3177489****1024",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Biru",
+    "year": 2024,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "MENUNGGAK"
+  },
+  "F 3959 TZH": {
+    "owner_name": "Pemilik Kendaraan TZH",
+    "nik_masked": "3179005****3755",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Merah",
+    "year": 2021,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "F 5554 I": {
+    "owner_name": "Pemilik Kendaraan 4 I",
+    "nik_masked": "3172299****2966",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Xenia",
+    "vehicle_color": "Hitam",
+    "year": 2015,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 7400 GJC": {
+    "owner_name": "Pemilik Kendaraan GJC",
+    "nik_masked": "3175295****2441",
+    "vehicle_brand": "Daihatsu",
+    "vehicle_model": "Ertiga",
+    "vehicle_color": "Hitam",
+    "year": 2016,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "BELUM_BAYAR"
+  },
+  "D 1506 JR": {
+    "owner_name": "Pemilik Kendaraan  JR",
+    "nik_masked": "3179358****9558",
+    "vehicle_brand": "Wuling",
+    "vehicle_model": "Pajero",
+    "vehicle_color": "Biru",
+    "year": 2018,
+    "stnk_expiry": "2024-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "B 4931 VDK": {
+    "owner_name": "Pemilik Kendaraan VDK",
+    "nik_masked": "3173564****4905",
+    "vehicle_brand": "Mitsubishi",
+    "vehicle_model": "Jazz",
+    "vehicle_color": "Merah",
+    "year": 2021,
+    "stnk_expiry": "2025-12-31",
+    "pajak_status": "LUNAS"
+  },
+  "D 1181 T": {
+    "owner_name": "Pemilik Kendaraan 1 T",
+    "nik_masked": "3178510****1893",
+    "vehicle_brand": "Honda",
+    "vehicle_model": "Almaz",
+    "vehicle_color": "Biru",
+    "year": 2016,
+    "stnk_expiry": "2028-12-31",
+    "pajak_status": "LUNAS"
+  }
+}

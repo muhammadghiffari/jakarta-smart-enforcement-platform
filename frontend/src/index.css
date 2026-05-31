@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-canvas text-body font-body antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  /* Apple-like button grammar */
+  .btn-primary {
+    @apply bg-primary text-white rounded-pill px-[22px] py-[11px] font-body text-[17px] font-normal tracking-tight transition-transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary-focus focus:ring-offset-2;
+  }
+  
+  .btn-secondary-pill {
+    @apply bg-transparent text-primary border border-primary rounded-pill px-[22px] py-[11px] font-body text-[17px] font-normal tracking-tight transition-transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary-focus focus:ring-offset-2;
+  }
+  
+  .btn-dark-utility {
+    @apply bg-ink text-body-on-dark rounded-sm px-[15px] py-[8px] font-body text-[14px] font-normal tracking-tight transition-transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary-focus focus:ring-offset-2;
+  }
+
+  /* Utility Cards */
+  .store-utility-card {
+    @apply bg-canvas border border-hairline rounded-lg p-6;
+  }
+}

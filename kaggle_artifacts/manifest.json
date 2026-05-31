@@ -1,0 +1,23 @@
+{
+  "plate_model_base": "yolo26s.pt",
+  "plate_model_path": "/kaggle/working/jsep_runs/plate_detector_v1/weights/best.pt",
+  "vehicle_model_path": null,
+  "rag_text_files": [
+    "ba_laporan_penyelesaian_pekerjaan.txt",
+    "ba_negosiasi_teknis_dan_harga.txt",
+    "ba_pemeriksaan_fisik_hasil_pekerjaan.txt",
+    "ba_pengelolaanaset2021kepgub0031487.txt",
+    "ba_surat_tagihan.txt",
+    "berita_acara_pemberian_penjelasan.txt",
+    "berita_acara_pemberian_penjelasan_kualifikasi.txt",
+    "berita_acara_pemeriksaan_hasil_pekerjaan.txt",
+    "berita_acara_pengumuman_negosiasi.txt",
+    "c-14.-berita-acara-serah-terima-barang.txt",
+    "daftar_sanksi_pelanggaran.txt",
+    "pergub_dki_155_2018_ganjilgenap.txt",
+    "pergub_dki_88_2019.txt",
+    "pm_kemenhub_025.txt",
+    "pm_perhubungan_15_2019_halte.txt",
+    "uu_llaj_22_2009_relevant.txt"
+  ]
+}

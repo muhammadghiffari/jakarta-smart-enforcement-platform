@@ -1,0 +1,18 @@
+SANCTION_PARKING_DKI_DEFAULT:
+  title: Sanksi parkir/berhenti ilegal
+  fine_min_idr: 0
+  fine_max_idr: 500000
+  action_type: ticket_or_tow
+  notes: Referensi demo. Validasi dengan tim hukum DISHUB sebelum produksi.
+SANCTION_DEDICATED_LANE_DEFAULT:
+  title: Sanksi pelanggaran jalur khusus (busway/sepeda)
+  fine_min_idr: 0
+  fine_max_idr: 500000
+  action_type: ticket
+  notes: Referensi demo. Validasi dengan tim hukum DISHUB sebelum produksi.
+SANCTION_ILLEGAL_DROPOFF_DEFAULT:
+  title: Sanksi naik/turun penumpang di luar halte
+  fine_min_idr: 0
+  fine_max_idr: 250000
+  action_type: dispatch_or_ticket
+  notes: Referensi demo. Validasi dengan tim hukum DISHUB sebelum produksi.

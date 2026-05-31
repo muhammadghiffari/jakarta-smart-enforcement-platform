@@ -1,0 +1,5 @@
+# Source: Berita Acara Pemeriksaan Hasil Pekerjaan.pdf
+# Extracted for JSEP optional RAG / reviewer-assist drafting
+# Not authoritative for sanctions or enforcement decisions
+
+[Page 1]

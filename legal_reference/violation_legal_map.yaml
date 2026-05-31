@@ -1,0 +1,51 @@
+ILLEGAL_PARKING:
+  legal_basis_code: UU_LLAJ_22_2009_PASAL_287
+  sanction_code: SANCTION_PARKING_DKI_DEFAULT
+  relevant_unit: parking_enforcement
+  evidence_required:
+  - plate_number
+  - vehicle_class
+  - no_parking_zone_id
+  - duration_seconds
+  - best_frame_url
+  - video_clip_url
+  static_report_fragment: Kendaraan terdeteksi berhenti/parkir pada zona larangan
+    selama {duration_seconds} detik.
+BUSWAY_VIOLATION:
+  legal_basis_code: UU_LLAJ_22_2009_PASAL_287
+  sanction_code: SANCTION_DEDICATED_LANE_DEFAULT
+  relevant_unit: corridor_enforcement
+  evidence_required:
+  - plate_number
+  - vehicle_class
+  - busway_zone_id
+  - best_frame_url
+  - video_clip_url
+  static_report_fragment: Kendaraan terdeteksi memasuki jalur busway TransJakarta
+    yang dilarang.
+BICYCLE_LANE_VIOLATION:
+  legal_basis_code: UU_LLAJ_22_2009_PASAL_287
+  sanction_code: SANCTION_DEDICATED_LANE_DEFAULT
+  relevant_unit: road_discipline_unit
+  evidence_required:
+  - plate_number
+  - vehicle_class
+  - bicycle_lane_zone_id
+  - duration_seconds
+  - best_frame_url
+  - video_clip_url
+  static_report_fragment: Kendaraan bermotor terdeteksi memasuki jalur sepeda khusus
+    selama {duration_seconds} detik.
+ILLEGAL_DROPOFF:
+  legal_basis_code: PM_PERHUBUNGAN_15_2019_HALTE
+  sanction_code: SANCTION_ILLEGAL_DROPOFF_DEFAULT
+  relevant_unit: public_transport_supervision
+  evidence_required:
+  - plate_number
+  - vehicle_class
+  - designated_stop_id
+  - duration_seconds
+  - best_frame_url
+  - video_clip_url
+  static_report_fragment: Kendaraan angkutan umum terdeteksi menaikkan/menurunkan
+    penumpang di luar halte resmi selama {duration_seconds} detik.

@@ -1,0 +1,124 @@
+{#
+  templates/berita_acara_static.j2
+  DISHUB DKI Jakarta — Format Resmi Berita Acara Pelanggaran Lalu Lintas
+  Fallback template (no LLM required) — used when Gemini API unavailable (FR-REP-06)
+  Variables: plate, violation_type, zone_name, duration_s, timestamp,
+             camera_id, officer_id, confidence, ticket_number,
+             owner_name (optional), vehicle_brand (optional), vehicle_color (optional)
+#}
+{%- set VIOLATION_MAP = {
+    'ILLEGAL_PARKING':        {'name': 'Parkir Liar / Berhenti di Tempat Terlarang',   'pasal': 'Pasal 287 ayat (1) jo. Pasal 106 ayat (4)',  'denda': 'Rp 500.000,-'},
+    'BUSWAY_VIOLATION':       {'name': 'Memasuki Jalur Busway TransJakarta',            'pasal': 'Pasal 287 ayat (1) jo. Pasal 106 ayat (4)',  'denda': 'Rp 500.000,-'},
+    'BICYCLE_LANE_VIOLATION': {'name': 'Memasuki Jalur Sepeda Khusus',                  'pasal': 'Pasal 287 ayat (1)',                          'denda': 'Rp 500.000,-'},
+    'ILLEGAL_DROPOFF':        {'name': 'Menaikkan/Menurunkan Penumpang di Luar Halte',  'pasal': 'Pasal 34 PM Perhubungan No. 15 Tahun 2019',  'denda': 'Rp 250.000,-'},
+    'GANJIL_GENAP':           {'name': 'Pelanggaran Sistem Ganjil-Genap',               'pasal': 'Pasal 287 ayat (5)',                          'denda': 'Rp 500.000,-'},
+} -%}
+{%- set vio = VIOLATION_MAP.get(violation_type, {'name': violation_type, 'pasal': 'UU No. 22 Tahun 2009 tentang LLAJ', 'denda': 'Rp 500.000,-'}) -%}
+{%- set ts = timestamp | string -%}
+{%- set dur_min = (duration_s // 60) | int -%}
+{%- set dur_sec = (duration_s % 60) | int -%}
+
+================================================================================
+         PEMERINTAH PROVINSI DAERAH KHUSUS IBUKOTA JAKARTA
+                        DINAS PERHUBUNGAN
+    Gedung Graha Lestari, Jl. Kesehatan No. 48, Gambir, Jakarta Pusat 10110
+              Telp: (021) 3501349 | Email: dishub@jakarta.go.id
+================================================================================
+
+                  BERITA ACARA PELANGGARAN LALU LINTAS
+                     SISTEM E-TLE JSEP DISHUB DKI JAKARTA
+
+Nomor    : {{ ticket_number | default('DRAFT-' ~ plate | replace(' ', '') ~ '-' ~ ts[:10] | replace('-', '')) }}
+Tanggal  : {{ ts[:10] }}
+Kamera   : {{ camera_id }}
+Referensi: Pergub DKI Jakarta No. 4 Tahun 2021 tentang Organisasi dan Tata Kerja
+           Dinas Perhubungan; UU No. 22 Tahun 2009 tentang LLAJ
+
+================================================================================
+
+Pada hari ini, tanggal {{ ts[:10] }} pukul {{ ts[11:16] }} WIB, sistem pemantauan
+kamera CCTV Cerdas JSEP milik Dinas Perhubungan Provinsi DKI Jakarta telah
+mencatat pelanggaran lalu lintas sebagaimana diuraikan di bawah ini.
+
+I. DATA KENDARAAN PELANGGAR
+   ─────────────────────────────────────────────────────────────────────────────
+   Nomor Polisi       : {{ plate }}
+{%- if owner_name is defined and owner_name %}
+   Nama Pemilik       : {{ owner_name }}
+{%- endif %}
+{%- if vehicle_brand is defined and vehicle_brand %}
+   Merk/Warna         : {{ vehicle_brand }}{% if vehicle_color is defined %} / {{ vehicle_color }}{% endif %}
+
+{%- endif %}
+   Confidence Score   : {{ "%.1f"|format(confidence * 100) }}%
+   Status Verifikasi  : {% if confidence >= 0.85 %}TERVERIFIKASI OTOMATIS (≥85%){% else %}DIVERIFIKASI PETUGAS{% endif %}
+
+II. DATA PELANGGARAN
+   ─────────────────────────────────────────────────────────────────────────────
+   Jenis Pelanggaran  : {{ vio.name }}
+   Lokasi/Zona        : {{ zone_name }}
+   Waktu Kejadian     : {{ ts[:19] | replace('T', ' ') }} WIB
+   Durasi Pelanggaran : {% if dur_min > 0 %}{{ dur_min }} menit {% endif %}{{ dur_sec }} detik
+   ID Kamera CCTV     : {{ camera_id }}
+   Dasar Hukum        : {{ vio.pasal }}
+                        Undang-Undang No. 22 Tahun 2009 tentang LLAJ
+   Sanksi Denda       : {{ vio.denda }}
+
+III. URAIAN KEJADIAN
+   ─────────────────────────────────────────────────────────────────────────────
+   Berdasarkan rekaman kamera CCTV cerdas pada sistem JSEP Dinas Perhubungan
+   DKI Jakarta, kendaraan dengan Nomor Polisi {{ plate }} terdeteksi melakukan
+   {{ vio.name }} di zona {{ zone_name }} selama
+   {% if dur_min > 0 %}{{ dur_min }} menit {% endif %}{{ dur_sec }} detik,
+   dimulai pada pukul {{ ts[11:16] }} WIB tanggal {{ ts[:10] }}.
+
+   Pelanggaran ini dideteksi secara otomatis oleh sistem AI JSEP dengan
+   tingkat keyakinan (confidence score) sebesar {{ "%.1f"|format(confidence * 100) }}%.
+   Bukti rekaman video dan foto telah tersimpan dalam sistem dengan kode
+   tiket {{ ticket_number | default('(draft — belum diterbitkan)') }}.
+
+IV. KETENTUAN HUKUM
+   ─────────────────────────────────────────────────────────────────────────────
+   Pelanggaran ini merupakan pelanggaran terhadap {{ vio.pasal }}
+   Undang-Undang Nomor 22 Tahun 2009 tentang Lalu Lintas dan Angkutan Jalan,
+   dengan ancaman denda administratif sebesar {{ vio.denda }}.
+{%- if violation_type == 'GANJIL_GENAP' %}
+   Pelanggaran sistem Ganjil-Genap juga diatur dalam Peraturan Gubernur
+   DKI Jakarta Nomor 155 Tahun 2018 tentang Pembatasan Lalu Lintas
+   Sistem Ganjil-Genap.
+{%- elif violation_type == 'ILLEGAL_DROPOFF' %}
+   Ketentuan mengenai halte wajib juga diatur dalam Peraturan Menteri
+   Perhubungan Nomor PM 15 Tahun 2019.
+{%- elif violation_type in ('BUSWAY_VIOLATION', 'BICYCLE_LANE_VIOLATION') %}
+   Ketentuan penggunaan jalur khusus juga diatur dalam Peraturan Gubernur
+   DKI Jakarta Nomor 88 Tahun 2019.
+{%- endif %}
+
+V. TINDAK LANJUT
+   ─────────────────────────────────────────────────────────────────────────────
+   Berdasarkan uraian di atas, kepada pemilik/pengemudi kendaraan Nomor
+   Polisi {{ plate }} dikenakan kewajiban membayar denda sebesar {{ vio.denda }}
+   melalui mekanisme E-TLE (Electronic Traffic Law Enforcement) Polri.
+
+   Pemberitahuan resmi akan disampaikan ke alamat pemilik kendaraan sesuai
+   data yang tercatat pada Korlantas Polri.
+
+================================================================================
+   Berita Acara ini dibuat secara otomatis oleh Sistem JSEP Dinas Perhubungan
+   DKI Jakarta berdasarkan rekaman CCTV yang telah diverifikasi.
+================================================================================
+
+   Diverifikasi oleh petugas     :  {{ officer_id }}
+   Waktu verifikasi               :  {{ ts[:19] | replace('T', ' ') }} WIB
+   Nomor tiket E-TLE              :  {{ ticket_number | default('DRAFT — Menunggu Persetujuan') }}
+   Hash bukti rekaman             :  {{ evidence_hash | default('(akan digenerate saat submit)') }}
+
+   [Tanda tangan digital petugas DISHUB DKI Jakarta]
+   Dinas Perhubungan Provinsi DKI Jakarta
+
+================================================================================
+   CATATAN SISTEM: Dokumen ini digenerate otomatis oleh JSEP v5.0.
+   Tingkat keyakinan AI: {{ "%.1f"|format(confidence * 100) }}%.
+   Dokumen ini sah setelah disetujui oleh petugas E-TLE berwenang.
+   Semua bukti tersimpan di: MinIO/jsep-evidence/{{ ticket_number | default('draft') }}/
+================================================================================

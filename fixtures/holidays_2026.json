@@ -1,0 +1,59 @@
+{
+  "_source": "Keputusan Bersama 3 Menteri — Hari Libur Nasional dan Cuti Bersama 2026",
+  "_note": "Untuk validasi Ganjil-Genap (FR-VIO-09, PRD Section 7.3) — update tiap tahun",
+  "_total_holidays": 17,
+  "holidays": [
+    "2026-01-01",
+    "2026-01-16",
+    "2026-02-17",
+    "2026-03-19",
+    "2026-03-21",
+    "2026-03-22",
+    "2026-04-03",
+    "2026-04-05",
+    "2026-05-01",
+    "2026-05-14",
+    "2026-05-27",
+    "2026-05-31",
+    "2026-06-01",
+    "2026-06-16",
+    "2026-08-17",
+    "2026-08-25",
+    "2026-12-25"
+  ],
+  "holiday_names": {
+    "2026-01-01": "Tahun Baru Masehi",
+    "2026-01-16": "Isra Mi'raj Nabi Muhammad SAW",
+    "2026-02-17": "Tahun Baru Imlek 2577",
+    "2026-03-19": "Hari Raya Nyepi (Tahun Baru Saka)",
+    "2026-03-21": "Hari Raya Idul Fitri 1447 H",
+    "2026-03-22": "Hari Raya Idul Fitri 1447 H (Hari Kedua)",
+    "2026-04-03": "Wafat Isa Al Masih (Good Friday)",
+    "2026-04-05": "Kebangkitan Isa Al Masih (Easter Sunday)",
+    "2026-05-01": "Hari Buruh Internasional",
+    "2026-05-14": "Kenaikan Isa Al Masih",
+    "2026-05-27": "Hari Raya Idul Adha 1447 H",
+    "2026-05-31": "Hari Raya Waisak",
+    "2026-06-01": "Hari Lahir Pancasila",
+    "2026-06-16": "Tahun Baru Islam 1448 H",
+    "2026-08-17": "Hari Kemerdekaan Republik Indonesia",
+    "2026-08-25": "Maulid Nabi Muhammad SAW",
+    "2026-12-25": "Hari Raya Natal"
+  },
+  "cuti_bersama": [
+    "2026-03-20",
+    "2026-03-23",
+    "2026-03-24",
+    "2026-03-25",
+    "2026-03-26",
+    "2026-03-27"
+  ],
+  "cuti_bersama_notes": {
+    "2026-03-20": "Cuti Bersama Idul Fitri",
+    "2026-03-23": "Cuti Bersama Idul Fitri",
+    "2026-03-24": "Cuti Bersama Idul Fitri",
+    "2026-03-25": "Cuti Bersama Idul Fitri",
+    "2026-03-26": "Cuti Bersama Idul Fitri",
+    "2026-03-27": "Cuti Bersama Idul Fitri"
+  }
+}
