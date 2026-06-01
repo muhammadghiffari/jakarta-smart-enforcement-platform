@@ -30,13 +30,18 @@ const navItems = [
   { to: '/crm-dispatch', label: 'CRM & Dispatch', icon: Shield },
 ];
 
-const routeMeta: Record<string, { title: string; action: string; icon: typeof Activity }> = {
-  '/':          { title: 'Operations Center',        action: 'Generate Report',   icon: Activity },
-  '/map':       { title: 'Violation Intelligence',   action: 'Export Map',        icon: Map },
-  '/analytics': { title: 'Analytics',                action: 'Share Brief',       icon: BarChart3 },
-  '/optimizer': { title: 'MCLP Optimizer',           action: 'Run Scenario',      icon: Route },
-  '/etle':      { title: 'E-TLE Review',             action: 'Open Audit',        icon: FileCheck2 },
-  '/crm-dispatch': { title: 'CRM & Dispatch Routing',   action: 'Trigger Complaint', icon: Shield },
+const routeMeta: Record<string, {
+  title: string;
+  action: string;
+  icon: typeof Activity;
+  links: { label: string; href: string }[];
+}> = {
+  '/':          { title: 'Operations Center',       action: 'Generate Report',   icon: Activity,   links: [{ label: 'Live Feed', href: '#live' }, { label: 'KPIs', href: '#kpis' }, { label: 'Alerts', href: '#alerts' }] },
+  '/map':       { title: 'Violation Intelligence',  action: 'Export Map',        icon: Map,        links: [{ label: 'Heatmap', href: '#heatmap' }, { label: 'Zones', href: '#zones' }, { label: 'Stops', href: '#stops' }] },
+  '/analytics': { title: 'Analytics',               action: 'Share Brief',       icon: BarChart3,  links: [{ label: 'Trends', href: '#trends' }, { label: 'Breakdown', href: '#breakdown' }, { label: 'Leaderboard', href: '#leaderboard' }] },
+  '/optimizer': { title: 'MCLP Optimizer',          action: 'Run Scenario',      icon: Route,      links: [{ label: 'Config', href: '#config' }, { label: 'Coverage', href: '#coverage' }, { label: 'Results', href: '#results' }] },
+  '/etle':      { title: 'E-TLE Review & Inference', action: 'Open Audit Log',    icon: FileCheck2, links: [{ label: 'Queue / Model', href: '#etle-view' }, { label: 'Rules Engine', href: '#rules-section' }, { label: 'Audit Log', href: '#audit-section' }] },
+  '/crm-dispatch': { title: 'CRM & Dispatch Routing', action: 'Trigger Complaint', icon: Shield,  links: [{ label: 'Dispatch', href: '#dispatch' }, { label: 'Reports', href: '#reports' }, { label: 'Leaderboard', href: '#leaderboard' }] },
 };
 
 // Animated hexagon logo
@@ -148,6 +153,13 @@ function SubNav() {
   const meta = routeMeta[location.pathname] ?? routeMeta['/'];
   const PageIcon = meta.icon;
 
+  const handleAction = () => {
+    // Dispatch a custom event that each page can listen to for its primary action
+    window.dispatchEvent(new CustomEvent('jsep:subnav-action', {
+      detail: { route: location.pathname, action: meta.action }
+    }));
+  };
+
   return (
     <div className="sub-nav">
       <div className="sub-nav-title">
@@ -155,10 +167,15 @@ function SubNav() {
         <span>{meta.title}</span>
       </div>
       <div className="sub-nav-links">
-        <a href="#live">Live</a>
-        <a href="#insights">Insights</a>
-        <a href="#review">Review</a>
-        <button className="btn-primary btn-compact" type="button" id="subnav-action">
+        {meta.links.map(({ label, href }) => (
+          <a key={label} href={href}>{label}</a>
+        ))}
+        <button
+          className="btn-primary btn-compact"
+          type="button"
+          id="subnav-action"
+          onClick={handleAction}
+        >
           <Zap size={13} aria-hidden="true" />
           <span>{meta.action}</span>
         </button>

@@ -83,21 +83,43 @@ def _plate_detector() -> PlateDetector:
     return PlateDetector(_model_path("PLATE_MODEL", "models/plate_detector_best.pt"))
 
 
+
 def _draw_detections(frame: np.ndarray, detections: list[dict[str, Any]]) -> np.ndarray:
+    # Per vehicle class color palette (BGR)
+    CLASS_COLORS = {
+        "car":        (0, 210, 255),   # cyan
+        "motorcycle": (0, 220, 60),    # green
+        "truck":      (0, 140, 255),   # orange
+        "bus":        (200, 80, 255),  # violet
+        "angkot":     (0, 255, 200),   # teal
+        "bajaj":      (30, 200, 30),   # bright green
+        "bicycle":    (255, 180, 0),   # amber
+    }
     out = frame.copy()
     for detection in detections:
         x1, y1, x2, y2 = [int(value) for value in detection["bbox"]]
-        color = (204, 102, 0)
+        cls = detection["class_name"].lower()
+        color = CLASS_COLORS.get(cls, (80, 80, 255))
+        # Main bounding box (2px)
         cv2.rectangle(out, (x1, y1), (x2, y2), color, 2)
-        label = f"{detection['class_name']} {detection['confidence']:.2f}"
-        (tw, th), _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.55, 1)
-        cv2.rectangle(out, (x1, max(0, y1 - th - 9)), (x1 + tw + 8, y1), color, -1)
-        cv2.putText(out, label, (x1 + 4, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.55, (255, 255, 255), 1, cv2.LINE_AA)
+        # Corner accent lines for a modern HUD look
+        length = max(12, min(24, (x2 - x1) // 6))
+        for (cx, cy, sx, sy) in [(x1, y1, 1, 1), (x2, y1, -1, 1), (x1, y2, 1, -1), (x2, y2, -1, -1)]:
+            cv2.line(out, (cx, cy), (cx + sx * length, cy), color, 3)
+            cv2.line(out, (cx, cy), (cx, cy + sy * length), color, 3)
+
+        label = f"{cls.upper()} {detection['confidence']:.0%}"
+        (tw, th), _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 1)
+        cv2.rectangle(out, (x1, max(0, y1 - th - 10)), (x1 + tw + 8, y1), color, -1)
+        cv2.putText(out, label, (x1 + 4, y1 - 4), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 1, cv2.LINE_AA)
 
         for plate in detection.get("plates", []):
             px1, py1, px2, py2 = [int(value) for value in plate["bbox"]]
-            cv2.rectangle(out, (px1, py1), (px2, py2), (41, 151, 255), 2)
+            cv2.rectangle(out, (px1, py1), (px2, py2), (255, 255, 80), 2)
+            cv2.putText(out, "PLATE", (px1, py1 - 4), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 255, 80), 1, cv2.LINE_AA)
     return out
+
+
 
 
 def _source_descriptor(kind: str, path: Path | None = None) -> dict[str, Any]:

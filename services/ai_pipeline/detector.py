@@ -77,11 +77,21 @@ class VehicleDetector:
         """
         results = self.model(frame, conf=self.conf, verbose=False)
         detections = []
+        allowed_vehicles = {"car", "motorcycle", "truck", "bus", "angkot", "bajaj", "bicycle"}
         for r in results:
             names = r.names  # may differ if using COCO pretrained model
             for box in r.boxes:
                 cls_id   = int(box.cls[0])
-                cls_name = names.get(cls_id, VEHICLE_CLASSES[cls_id] if cls_id < len(VEHICLE_CLASSES) else str(cls_id))
+                cls_name = names.get(cls_id, VEHICLE_CLASSES[cls_id] if cls_id < len(VEHICLE_CLASSES) else str(cls_id)).lower()
+                
+                # Normalize motorbike to motorcycle
+                if cls_name == "motorbike":
+                    cls_name = "motorcycle"
+                
+                # Only keep vehicles
+                if cls_name not in allowed_vehicles:
+                    continue
+                
                 detections.append({
                     "bbox":       box.xyxy[0].tolist(),   # [x1, y1, x2, y2]
                     "class_id":   cls_id,

@@ -181,6 +181,17 @@ export default function CRMDispatchPage() {
     return () => clearInterval(interval);
   }, [fetchCRMData]);
 
+  // Listen to SubNav action button → trigger JAKI complaint ingestion
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent).detail;
+      if (detail?.route === '/crm-dispatch') triggerJakiReport();
+    };
+    window.addEventListener('jsep:subnav-action', handler);
+    return () => window.removeEventListener('jsep:subnav-action', handler);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const triggerJakiReport = async () => {
     setSimulating(true);
     setNotice('Simulating citizen report ingestion via JAKI webhook...');
@@ -327,7 +338,7 @@ export default function CRMDispatchPage() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
           
           {/* Card 1: Citizen Points & Engagement Leaderboard */}
-          <motion.div className="glass-panel" {...fadeUp(0.1)} style={{ padding: 24 }}>
+          <motion.div id="leaderboard" className="glass-panel" {...fadeUp(0.1)} style={{ padding: 24 }}>
             <h3 style={{ fontSize: 14, fontWeight: 600, display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
               <Award size={16} color="#ffaa00" />
               Citizen Reporting Gamification (FR-VIO-08 / RULE-10)
@@ -405,7 +416,7 @@ export default function CRMDispatchPage() {
           </motion.div>
 
           {/* Card 2: Citizen Reports Live Feed */}
-          <motion.div className="glass-panel" {...fadeUp(0.2)} style={{ padding: 24, flexGrow: 1, display: 'flex', flexDirection: 'column', minHeight: 380 }}>
+          <motion.div id="reports" className="glass-panel" {...fadeUp(0.2)} style={{ padding: 24, flexGrow: 1, display: 'flex', flexDirection: 'column', minHeight: 380 }}>
             <h3 style={{ fontSize: 14, fontWeight: 600, display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
               <Radio size={16} color="#00d4ff" />
               Ingested JAKI Complaint Webhooks
@@ -538,7 +549,7 @@ export default function CRMDispatchPage() {
           </motion.div>
 
           {/* Card 4: Unit Dispatches Center (Routing Feed) */}
-          <motion.div className="glass-panel" {...fadeUp(0.25)} style={{ padding: 24, flexGrow: 1, display: 'flex', flexDirection: 'column', minHeight: 380 }}>
+          <motion.div id="dispatch" className="glass-panel" {...fadeUp(0.25)} style={{ padding: 24, flexGrow: 1, display: 'flex', flexDirection: 'column', minHeight: 380 }}>
             <h3 style={{ fontSize: 14, fontWeight: 600, display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
               <FileClock size={16} color="#ff0055" />
               Operational Agency Unit Dispatches

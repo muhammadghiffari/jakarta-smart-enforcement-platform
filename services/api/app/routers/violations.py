@@ -227,3 +227,22 @@ def generate_berita_acara_endpoint(violation_id: UUID, format: str = "json", db:
 
     # Default to returning JSON so the frontend/government APIs can use it directly
     return {"status": "success", "content": text_content}
+
+@router.get("/audit_logs")
+def list_audit_logs(limit: int = 50, skip: int = 0, db: Session = Depends(get_db)):
+    """List all audit logs for the ETLE operations."""
+    query = db.query(models.AuditLog)
+    total = query.count()
+    items = query.order_by(models.AuditLog.created_at.desc()).offset(skip).limit(limit).all()
+    formatted = []
+    for x in items:
+        formatted.append({
+            "id": str(x.id),
+            "action": x.action,
+            "entity_type": x.entity_type,
+            "entity_id": x.entity_id,
+            "officer_id": x.officer_id,
+            "detail": x.detail,
+            "created_at": x.created_at.isoformat() if x.created_at else ""
+        })
+    return {"items": formatted, "total": total}
