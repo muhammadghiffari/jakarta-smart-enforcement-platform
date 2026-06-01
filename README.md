@@ -1,5 +1,7 @@
 # JSEP – Jakarta Smart Enforcement Platform
 
+![DeepWiki Badge](https://deepwiki.com/badge-maker?url=https%3A%2F%2Fdeepwiki.com%2Fmuhammadghiffari%2Fjakarta-smart-enforcement-platform)
+
 > End-to-end AI-powered traffic violation detection system using YOLO26, ANPR (PaddleOCR), FastAPI, WebSockets, TimescaleDB, and React.
 
 ---
