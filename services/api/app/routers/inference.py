@@ -13,7 +13,7 @@ import numpy as np
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 
-from services.ai_pipeline.detector import PlateDetector, VehicleDetector
+from services.ai_pipeline.pipeline import JSEPPipeline
 
 router = APIRouter(prefix="/api/v1/inference", tags=["inference"])
 
@@ -73,53 +73,15 @@ def _encode_jpeg(frame: np.ndarray) -> str:
     return f"data:image/jpeg;base64,{encoded}"
 
 
-@lru_cache(maxsize=1)
-def _vehicle_detector() -> VehicleDetector:
-    return VehicleDetector(_model_path("DETECTION_MODEL", "models/yolo26n.pt"))
-
-
-@lru_cache(maxsize=1)
-def _plate_detector() -> PlateDetector:
-    return PlateDetector(_model_path("PLATE_MODEL", "models/plate_detector_best.pt"))
-
-
-
-def _draw_detections(frame: np.ndarray, detections: list[dict[str, Any]]) -> np.ndarray:
-    # Per vehicle class color palette (BGR)
-    CLASS_COLORS = {
-        "car":        (0, 210, 255),   # cyan
-        "motorcycle": (0, 220, 60),    # green
-        "truck":      (0, 140, 255),   # orange
-        "bus":        (200, 80, 255),  # violet
-        "angkot":     (0, 255, 200),   # teal
-        "bajaj":      (30, 200, 30),   # bright green
-        "bicycle":    (255, 180, 0),   # amber
-    }
-    out = frame.copy()
-    for detection in detections:
-        x1, y1, x2, y2 = [int(value) for value in detection["bbox"]]
-        cls = detection["class_name"].lower()
-        color = CLASS_COLORS.get(cls, (80, 80, 255))
-        # Main bounding box (2px)
-        cv2.rectangle(out, (x1, y1), (x2, y2), color, 2)
-        # Corner accent lines for a modern HUD look
-        length = max(12, min(24, (x2 - x1) // 6))
-        for (cx, cy, sx, sy) in [(x1, y1, 1, 1), (x2, y1, -1, 1), (x1, y2, 1, -1), (x2, y2, -1, -1)]:
-            cv2.line(out, (cx, cy), (cx + sx * length, cy), color, 3)
-            cv2.line(out, (cx, cy), (cx, cy + sy * length), color, 3)
-
-        label = f"{cls.upper()} {detection['confidence']:.0%}"
-        (tw, th), _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 1)
-        cv2.rectangle(out, (x1, max(0, y1 - th - 10)), (x1 + tw + 8, y1), color, -1)
-        cv2.putText(out, label, (x1 + 4, y1 - 4), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 1, cv2.LINE_AA)
-
-        for plate in detection.get("plates", []):
-            px1, py1, px2, py2 = [int(value) for value in plate["bbox"]]
-            cv2.rectangle(out, (px1, py1), (px2, py2), (255, 255, 80), 2)
-            cv2.putText(out, "PLATE", (px1, py1 - 4), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 255, 80), 1, cv2.LINE_AA)
-    return out
-
-
+@lru_cache(maxsize=2)
+def _jsep_pipeline(run_plate_detection: bool) -> JSEPPipeline:
+    vehicle_path = _model_path("DETECTION_MODEL", "models/vehicle_detector_best.pt")
+    plate_path = _model_path("PLATE_MODEL", "models/plate_detector_best.pt")
+    return JSEPPipeline(
+        vehicle_model=vehicle_path,
+        plate_model=plate_path,
+        run_anpr=run_plate_detection
+    )
 
 
 def _source_descriptor(kind: str, path: Path | None = None) -> dict[str, Any]:
@@ -140,37 +102,35 @@ def _source_descriptor(kind: str, path: Path | None = None) -> dict[str, Any]:
 
 def _run_inference(frame: np.ndarray, run_plate_detection: bool, source: dict[str, Any]) -> DetectionResponse:
     started = time.perf_counter()
-    vehicle_detector = _vehicle_detector()
-    raw_detections = vehicle_detector.detect(frame)
+    
+    pipeline = _jsep_pipeline(run_plate_detection)
+    result = pipeline.process_frame(frame, fps=25.0)
 
     detections: list[dict[str, Any]] = []
-    plate_detector = _plate_detector() if run_plate_detection else None
-    for index, item in enumerate(raw_detections):
+    for t in result["tracks"]:
+        track_id = t["track_id"]
         detection = {
-            "id": f"det-{index + 1}",
-            "bbox": [round(float(value), 2) for value in item["bbox"]],
-            "class_id": int(item["class_id"]),
-            "class_name": str(item["class_name"]),
-            "confidence": round(float(item["confidence"]), 4),
+            "id": f"track-{track_id}",
+            "bbox": [round(float(value), 2) for value in t["bbox"]],
+            "class_id": int(t.get("class_id", 0)),
+            "class_name": str(t.get("class_name", "vehicle")),
+            "confidence": round(float(t.get("confidence", 1.0)), 4),
             "plates": [],
         }
 
-        if plate_detector is not None:
-            plates = plate_detector.detect_in_vehicle_crop(item["bbox"], frame)
-            detection["plates"] = [
-                {
-                    "bbox": [int(value) for value in plate["bbox"]],
-                    "confidence": round(float(plate["confidence"]), 4),
-                }
-                for plate in plates
-            ]
+        anpr = result["anpr"].get(track_id)
+        if anpr:
+            detection["plates"].append({
+                "bbox": [0,0,0,0], # Bbox omitted by pipeline wrapper
+                "confidence": anpr.get("composite_confidence", 0.0),
+                "text": anpr.get("plate_cleaned", ""),
+            })
 
         detections.append(detection)
 
-    annotated = _draw_detections(frame, detections)
     elapsed_ms = int((time.perf_counter() - started) * 1000)
     height, width = frame.shape[:2]
-    vehicle_path = _model_path("DETECTION_MODEL", "models/yolo26n.pt")
+    vehicle_path = _model_path("DETECTION_MODEL", "models/vehicle_detector_best.pt")
     plate_path = _model_path("PLATE_MODEL", "models/plate_detector_best.pt")
 
     return DetectionResponse(
@@ -181,18 +141,20 @@ def _run_inference(frame: np.ndarray, run_plate_detection: bool, source: dict[st
             "plate_model": plate_path,
             "plate_model_exists": Path(plate_path).exists(),
             "plate_detection": run_plate_detection,
+            "full_pipeline_active": True,
+            "violations_detected": len(result["violations"])
         },
         elapsed_ms=elapsed_ms,
         image_width=width,
         image_height=height,
         detections=detections,
-        annotated_image=_encode_jpeg(annotated),
+        annotated_image=_encode_jpeg(result["frame_out"]),
     )
 
 
 @router.get("/model")
 def model_status():
-    vehicle_path = _model_path("DETECTION_MODEL", "models/yolo26n.pt")
+    vehicle_path = _model_path("DETECTION_MODEL", "models/vehicle_detector_best.pt")
     plate_path = _model_path("PLATE_MODEL", "models/plate_detector_best.pt")
     demo_source = _ultralytics_demo_image() or (_repo_root() / "demo.jpg")
     return {
@@ -202,10 +164,10 @@ def model_status():
         ],
         "vehicle_model": vehicle_path,
         "vehicle_model_exists": Path(vehicle_path).exists(),
-        "vehicle_loaded": _vehicle_detector.cache_info().currsize > 0,
+        "vehicle_loaded": _jsep_pipeline.cache_info().currsize > 0,
         "plate_model": plate_path,
         "plate_model_exists": Path(plate_path).exists(),
-        "plate_loaded": _plate_detector.cache_info().currsize > 0,
+        "plate_loaded": _jsep_pipeline.cache_info().currsize > 0,
     }
 
 
@@ -222,3 +184,4 @@ def infer_demo(run_plate_detection: bool = False):
     if frame is None:
         raise HTTPException(status_code=404, detail=f"Demo image not readable: {sample}")
     return _run_inference(frame, run_plate_detection, _source_descriptor("demo", sample))
+
