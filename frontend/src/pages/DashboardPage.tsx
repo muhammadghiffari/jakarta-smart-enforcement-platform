@@ -185,6 +185,20 @@ export default function DashboardPage() {
     }
   };
 
+  const runDemoScenario = async (scenario: string) => {
+    setIsRunning(true);
+    setNotice(`Triggering Demo Scenario ${scenario}...`);
+    try {
+      const res = await fetch(`${apiBase}/api/v1/demo/trigger/${scenario}`, { method: 'POST' });
+      if (!res.ok) throw new Error('Demo trigger failed');
+      setNotice(`Demo Scenario ${scenario} triggered successfully. Check event stream.`);
+    } catch {
+      setNotice(`Failed to trigger Scenario ${scenario}. Is backend running?`);
+    } finally {
+      setIsRunning(false);
+    }
+  };
+
   const handleUpload = (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (!file) return;
@@ -285,6 +299,12 @@ export default function DashboardPage() {
               <span>Upload frame</span>
               <input id="frame-upload" accept="image/*" type="file" onChange={handleUpload} />
             </label>
+            <div className="demo-scenarios" style={{ display: 'flex', gap: '8px', marginLeft: '12px' }}>
+              <button className="btn-secondary-pill" onClick={() => runDemoScenario('A')} disabled={isRunning}>A: Parking</button>
+              <button className="btn-secondary-pill" onClick={() => runDemoScenario('B')} disabled={isRunning}>B: Busway</button>
+              <button className="btn-secondary-pill" onClick={() => runDemoScenario('C')} disabled={isRunning}>C: Dropoff</button>
+              <button className="btn-secondary-pill" onClick={() => runDemoScenario('E')} disabled={isRunning}>E: JAKI</button>
+            </div>
           </div>
         </motion.div>
 

@@ -178,13 +178,19 @@ class CRMReport(Base):
 
     id              = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     jaki_report_id  = Column(String(64), unique=True)
+    source          = Column(String(64), default="JAKI")
     category        = Column(String(64))
+    category_raw    = Column(String(64))
+    category_normalized = Column(String(64))
     lat             = Column(Float)
     lng             = Column(Float)
     photo_url       = Column(Text)
     description     = Column(Text)
     # SHA-256 of user_id — no real PII stored — PRD FR-VIO-08
     user_id_hashed  = Column(String(64))
+    citizen_score   = Column(Float)
+    cctv_score      = Column(Float)
+    combined_confidence = Column(Float)
     status          = Column(String(32), default="RECEIVED")
     corroborated_violation_id = Column(UUID(as_uuid=True), ForeignKey("violations.id"), nullable=True)
     created_at      = Column(DateTime(timezone=True), default=_now)
@@ -198,6 +204,7 @@ class UnitDispatch(Base):
 
     id              = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     violation_id    = Column(UUID(as_uuid=True), ForeignKey("violations.id"), nullable=True)
+    crm_report_id   = Column(UUID(as_uuid=True), ForeignKey("crm_reports.id"), nullable=True)
     unit_code       = Column(String(64))
     corridor        = Column(String(64))
     h3_cell         = Column(String(16))
@@ -233,3 +240,54 @@ class AuditLog(Base):
     officer_id  = Column(String(64))
     detail      = Column(Text)
     created_at  = Column(DateTime(timezone=True), default=_now)
+
+# --------------------------------------------------------------------------- #
+# legal_references: deterministic legal basis catalog
+# --------------------------------------------------------------------------- #
+class LegalReference(Base):
+    __tablename__ = "legal_references"
+
+    code            = Column(String(64), primary_key=True)
+    title           = Column(String(256), nullable=False)
+    citation_text   = Column(Text, nullable=False)
+    source_doc      = Column(String(128))
+    source_article  = Column(String(64))
+    effective_from  = Column(DateTime(timezone=True))
+    effective_to    = Column(DateTime(timezone=True))
+    version         = Column(String(32), default='demo_v1')
+    created_at      = Column(DateTime(timezone=True), default=_now)
+
+
+# --------------------------------------------------------------------------- #
+# sanction_references: deterministic sanction/fine catalog
+# --------------------------------------------------------------------------- #
+class SanctionReference(Base):
+    __tablename__ = "sanction_references"
+
+    code            = Column(String(64), primary_key=True)
+    title           = Column(String(256), nullable=False)
+    fine_min_idr    = Column(Integer)
+    fine_max_idr    = Column(Integer)
+    action_type     = Column(String(64))
+    notes           = Column(Text)
+    version         = Column(String(32), default='demo_v1')
+    created_at      = Column(DateTime(timezone=True), default=_now)
+
+
+# --------------------------------------------------------------------------- #
+# violation_legal_map: maps each violation type to legal basis and sanction
+# --------------------------------------------------------------------------- #
+from sqlalchemy.dialects.postgresql import JSONB
+
+class ViolationLegalMap(Base):
+    __tablename__ = "violation_legal_map"
+
+    violation_type  = Column(String(32), primary_key=True)
+    legal_code      = Column(String(64), ForeignKey("legal_references.code"))
+    sanction_code   = Column(String(64), ForeignKey("sanction_references.code"))
+    relevant_unit   = Column(String(64))
+    evidence_required = Column(JSONB, nullable=False)
+    static_report_fragment = Column(Text)
+    version         = Column(String(32), default='demo_v1')
+    created_at      = Column(DateTime(timezone=True), default=_now)
+

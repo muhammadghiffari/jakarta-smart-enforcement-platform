@@ -19,6 +19,7 @@ import { BrowserRouter as Router, NavLink, Route as AppRoute, Routes, useLocatio
 import DashboardPage from './pages/DashboardPage';
 import ETLEPage from './pages/ETLEPage';
 import { AnalyticsPage, OptimizerPage, ViolationMapPage } from './pages/OperationsPages';
+import CRMDispatchPage from './pages/CRMDispatchPage';
 
 const navItems = [
   { to: '/',          label: 'Dashboard', icon: LayoutDashboard },
@@ -26,6 +27,7 @@ const navItems = [
   { to: '/analytics', label: 'Analytics', icon: BarChart3 },
   { to: '/optimizer', label: 'Optimizer', icon: Route },
   { to: '/etle',      label: 'E-TLE',    icon: FileCheck2 },
+  { to: '/crm-dispatch', label: 'CRM & Dispatch', icon: Shield },
 ];
 
 const routeMeta: Record<string, { title: string; action: string; icon: typeof Activity }> = {
@@ -34,6 +36,7 @@ const routeMeta: Record<string, { title: string; action: string; icon: typeof Ac
   '/analytics': { title: 'Analytics',                action: 'Share Brief',       icon: BarChart3 },
   '/optimizer': { title: 'MCLP Optimizer',           action: 'Run Scenario',      icon: Route },
   '/etle':      { title: 'E-TLE Review',             action: 'Open Audit',        icon: FileCheck2 },
+  '/crm-dispatch': { title: 'CRM & Dispatch Routing',   action: 'Trigger Complaint', icon: Shield },
 };
 
 // Animated hexagon logo
@@ -184,6 +187,7 @@ function App() {
               <AppRoute path="/analytics" element={<motion.div key="analytics" {...pageVariants}><AnalyticsPage /></motion.div>} />
               <AppRoute path="/optimizer" element={<motion.div key="optimizer" {...pageVariants}><OptimizerPage /></motion.div>} />
               <AppRoute path="/etle"      element={<motion.div key="etle"      {...pageVariants}><ETLEPage /></motion.div>} />
+              <AppRoute path="/crm-dispatch" element={<motion.div key="crm-dispatch" {...pageVariants}><CRMDispatchPage /></motion.div>} />
             </Routes>
           </AnimatePresence>
         </main>

@@ -61,6 +61,10 @@ export default function ETLEPage() {
   const [selectedId, setSelectedId] = useState(demoViolations[0]?.id ?? '');
   const [notice, setNotice] = useState('Demo queue loaded while the API is warming up.');
 
+  const [reportModalOpen, setReportModalOpen] = useState(false);
+  const [reportContent, setReportContent] = useState('');
+  const [reportLoading, setReportLoading] = useState(false);
+
   const selected = violations.find((v) => v.id === selectedId) ?? violations[0];
 
   const queueSummary = useMemo(() => {
@@ -80,9 +84,9 @@ export default function ETLEPage() {
       const items = data.items ?? [];
       setViolations(items);
       setSelectedId((cur) => (items.some((i) => i.id === cur) ? cur : items[0]?.id ?? ''));
-      setNotice('Connected to API queue.');
+      setNotice('Connected to API queue. Data is live.');
     } catch {
-      setNotice('Using curated demo queue. API queue is not reachable yet.');
+      setNotice('⚠️ Using curated demo queue. API queue is not reachable yet. Start the backend or continue in Demo Mode.');
     } finally {
       setLoading(false);
     }
@@ -132,6 +136,29 @@ export default function ETLEPage() {
     } finally {
       removeFromQueue(violation.id);
       setNotice(`${violation.track_id} removed from the review queue.`);
+    }
+  };
+
+  const handleGenerateReport = async (violation: Violation) => {
+    setReportModalOpen(true);
+    setReportLoading(true);
+    setReportContent('');
+    try {
+      const res = await fetch(`${apiBase}/api/v1/violations/${violation.id}/berita_acara?format=json`);
+      if (!res.ok) throw new Error('API not reachable');
+      const data = await res.json();
+      setReportContent(data.content || 'Report generation succeeded but returned empty.');
+    } catch {
+      // Demo fallback text if the API isn't running
+      setReportContent(
+        `BERITA ACARA PELANGGARAN LALU LINTAS\n\n` +
+        `Pada hari ini, telah terekam pelanggaran lalu lintas oleh kendaraan dengan nomor polisi ${violation.track_id}.\n` +
+        `Jenis pelanggaran: ${formatViolationType(violation.violation_type)}\n` +
+        `Lokasi: ${violation.camera_id}\n\n` +
+        `[Demo Mode: API backend is not reachable to run the full narrative agent. Start the FastAPI backend to see the full RAG/LLM integration.]`
+      );
+    } finally {
+      setReportLoading(false);
     }
   };
 
@@ -206,11 +233,28 @@ export default function ETLEPage() {
                 animate={{ opacity: 1, y: 0, transition: { duration: 0.3 } }}
                 exit={{ opacity: 0, y: -8, transition: { duration: 0.2 } }}
               >
-                {/* Evidence clip preview */}
-                <div className="evidence-preview">
-                  <div className="camera-reticle" />
-                  <FileText size={40} aria-hidden="true" style={{ color: 'var(--text-muted)' }} />
-                  <span>Evidence clip</span>
+                {/* Evidence clip preview — CV annotated screenshot */}
+                <div className="evidence-preview" style={{ padding: 0, overflow: 'hidden', background: '#000' }}>
+                  <img
+                    src="/cv_evidence.png"
+                    alt={`CV evidence: ${selected.track_id} – ${selected.camera_id}`}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px', display: 'block' }}
+                    onError={(e) => {
+                      // Fallback: show camera icon with metadata overlay if image missing
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }}
+                  />
+                  {/* Overlay HUD on top of the image */}
+                  <div style={{
+                    position: 'absolute', bottom: 0, left: 0, right: 0,
+                    background: 'linear-gradient(transparent, rgba(0,0,0,0.75))',
+                    padding: '0.5rem 0.75rem', display: 'flex', justifyContent: 'space-between',
+                    fontSize: '0.7rem', fontFamily: 'monospace', color: '#fff', letterSpacing: '0.04em'
+                  }}>
+                    <span>🎥 {selected.camera_id}</span>
+                    <span style={{ color: '#f97316' }}>● VIOLATION DETECTED</span>
+                    <span>{new Date(selected.start_time).toLocaleTimeString('id-ID')}</span>
+                  </div>
                 </div>
 
                 {/* Detail panel */}
@@ -282,6 +326,15 @@ export default function ETLEPage() {
                     <button
                       className="btn-secondary-pill"
                       type="button"
+                      id={`btn-draft-${selected.id.slice(0, 8)}`}
+                      onClick={() => handleGenerateReport(selected)}
+                    >
+                      <FileText size={15} aria-hidden="true" />
+                      <span>Draft Report</span>
+                    </button>
+                    <button
+                      className="btn-secondary-pill"
+                      type="button"
                       id={`btn-dismiss-${selected.id.slice(0, 8)}`}
                       onClick={() => handleDismiss(selected)}
                     >
@@ -296,6 +349,79 @@ export default function ETLEPage() {
         </div>
         <p className="notice-line">{notice}</p>
       </section>
+
+      {/* ── REPORT MODAL ── */}
+      <AnimatePresence>
+        {reportModalOpen && (
+          <motion.div
+            className="modal-backdrop"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setReportModalOpen(false)}
+            style={{
+              position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.6)', 
+              backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', 
+              justifyContent: 'center', zIndex: 100
+            }}
+          >
+            <motion.div
+              className="modal-content"
+              onClick={(e) => e.stopPropagation()}
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              style={{
+                backgroundColor: 'var(--bg-surface)', padding: '2rem', 
+                borderRadius: '16px', border: '1px solid var(--border-light)',
+                width: '100%', maxWidth: '600px', maxHeight: '80vh', 
+                display: 'flex', flexDirection: 'column', gap: '1.5rem',
+                boxShadow: '0 24px 48px rgba(0,0,0,0.4)'
+              }}
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <h2 style={{ margin: 0, fontSize: '1.25rem' }}>Berita Acara Pelanggaran</h2>
+                <button 
+                  onClick={() => setReportModalOpen(false)}
+                  style={{ background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer' }}
+                >
+                  <XCircle size={24} />
+                </button>
+              </div>
+
+              <div style={{
+                flex: 1, overflowY: 'auto', backgroundColor: 'var(--bg-base)',
+                padding: '1.5rem', borderRadius: '8px', fontFamily: 'monospace',
+                whiteSpace: 'pre-wrap', lineHeight: 1.6, fontSize: '0.9rem',
+                border: '1px solid var(--border-light)'
+              }}>
+                {reportLoading ? (
+                  <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', color: 'var(--text-muted)' }}>
+                    <div className="live-dot" /> Generating formal report (RAG / LLM)...
+                  </div>
+                ) : (
+                  reportContent
+                )}
+              </div>
+
+              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '1rem' }}>
+                <button className="btn-secondary-pill" onClick={() => setReportModalOpen(false)}>
+                  Close
+                </button>
+                <a 
+                  className="btn-primary" 
+                  style={{ textDecoration: 'none' }}
+                  href={`${apiBase}/api/v1/violations/${selected.id}/berita_acara?format=pdf`} 
+                  target="_blank" 
+                  rel="noreferrer"
+                >
+                  <FileText size={15} style={{ marginRight: '8px' }}/> Download PDF
+                </a>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

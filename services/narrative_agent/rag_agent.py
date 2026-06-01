@@ -9,7 +9,8 @@ from chromadb import Documents, EmbeddingFunction, Embeddings
 
 
 CORPUS_COLLECTION = "jsep_legal"
-DEFAULT_CHROMA_PATH = os.environ.get("CHROMA_DB_PATH", "./chroma_db")
+PROJECT_ROOT = Path(__file__).parent.parent.parent
+DEFAULT_CHROMA_PATH = os.environ.get("CHROMA_DB_PATH", str(PROJECT_ROOT / "chroma_db"))
 
 
 class HashEmbeddingFunction(EmbeddingFunction):
@@ -43,8 +44,14 @@ def _chunk_text(text: str, chunk_size: int = 512, overlap: int = 50) -> list[str
 
 
 def _get_collection():
+    """Get or create the Chroma collection, avoiding EF conflict on existing collections."""
     client = chromadb.PersistentClient(path=DEFAULT_CHROMA_PATH)
-    return client.get_or_create_collection(
+    existing = [c.name for c in client.list_collections()]
+    if CORPUS_COLLECTION in existing:
+        # Collection already exists — fetch it without an EF to avoid conflict.
+        # We embed manually via HashEmbeddingFunction only when adding/querying.
+        return client.get_collection(name=CORPUS_COLLECTION)
+    return client.create_collection(
         name=CORPUS_COLLECTION,
         embedding_function=HashEmbeddingFunction(),
     )
@@ -53,6 +60,7 @@ def _get_collection():
 def index_legal_corpus(corpus_dir: str = "rag_corpus/") -> int:
     corpus_path = Path(corpus_dir)
     collection = _get_collection()
+    ef = HashEmbeddingFunction()
 
     indexed = 0
     for doc_path in sorted(corpus_path.glob("*.txt")):
@@ -61,7 +69,8 @@ def index_legal_corpus(corpus_dir: str = "rag_corpus/") -> int:
         ids = [f"{doc_path.stem}_{i}" for i in range(len(chunks))]
         metadatas = [{"source": doc_path.name, "chunk_index": i} for i in range(len(chunks))]
         if chunks:
-            collection.add(ids=ids, documents=chunks, metadatas=metadatas)
+            embeddings = ef(chunks)
+            collection.add(ids=ids, documents=chunks, embeddings=embeddings, metadatas=metadatas)
             indexed += len(chunks)
 
     print(f"Indexed {indexed} chunks into {CORPUS_COLLECTION}.")
@@ -70,7 +79,14 @@ def index_legal_corpus(corpus_dir: str = "rag_corpus/") -> int:
 
 def retrieve_legal_context(query: str, n_results: int = 5) -> list[str]:
     collection = _get_collection()
-    results = collection.query(query_texts=[query], n_results=n_results)
+    # Compute the embedding manually since the persisted collection may not store an EF.
+    ef = HashEmbeddingFunction()
+    query_embedding = ef([query])
+    try:
+        results = collection.query(query_embeddings=query_embedding, n_results=n_results)
+    except Exception:
+        # If collection is empty, query will fail — return empty context gracefully.
+        return []
     return results.get("documents", [[]])[0]
 
 
@@ -88,8 +104,11 @@ def generate_berita_acara(violation: dict) -> str:
         gemini_api_key = os.environ["GEMINI_API_KEY"]
         genai.configure(api_key=gemini_api_key)
 
+        primary_model_name = os.environ.get("GEMINI_MODEL_PRIMARY", "gemini-2.5-pro")
+        fallback_model_name = os.environ.get("GEMINI_MODEL_FALLBACK", "gemini-2.5-flash")
+
         model = genai.GenerativeModel(
-            model_name=os.environ.get("GEMINI_MODEL", "gemini-1.5-pro"),
+            model_name=primary_model_name,
             generation_config=genai.types.GenerationConfig(
                 max_output_tokens=800,
                 temperature=0.1,
@@ -118,7 +137,19 @@ Data Pelanggaran:
 
 Buat berita acara resmi sesuai format standar DISHUB DKI Jakarta.
 """
-        response = model.generate_content([system_prompt, user_prompt])
+        try:
+            response = model.generate_content([system_prompt, user_prompt])
+        except Exception as e:
+            print(f"Primary model {primary_model_name} failed: {e}. Falling back to {fallback_model_name}")
+            fallback_model = genai.GenerativeModel(
+                model_name=fallback_model_name,
+                generation_config=genai.types.GenerationConfig(
+                    max_output_tokens=800,
+                    temperature=0.1,
+                ),
+            )
+            response = fallback_model.generate_content([system_prompt, user_prompt])
+            
         return response.text.strip()
     except Exception:
         return _static_ba_fallback(violation)
@@ -126,6 +157,10 @@ Buat berita acara resmi sesuai format standar DISHUB DKI Jakarta.
 
 def _static_ba_fallback(v: dict) -> str:
     from jinja2 import Template
-
-    template = Template(Path("templates/berita_acara_static.j2").read_text(encoding="utf-8"))
+    
+    template_path = PROJECT_ROOT / "templates" / "berita_acara_static.j2"
+    if not template_path.exists():
+        template_path = Path("templates/berita_acara_static.j2")
+        
+    template = Template(template_path.read_text(encoding="utf-8"))
     return template.render(**v)
