@@ -1,0 +1,257 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_type": "NO_PARKING",
+        "threshold_s": 30,
+        "corridor": "SUDIRMAN",
+        "name": "Sudirman no-parking north"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [106.8219, -6.2022],
+            [106.8229, -6.2022],
+            [106.8229, -6.2032],
+            [106.8219, -6.2032],
+            [106.8219, -6.2022]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_type": "BUSWAY_LANE",
+        "threshold_s": 0,
+        "corridor": "SUDIRMAN",
+        "name": "Sudirman busway corridor"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [106.821, -6.201],
+            [106.822, -6.201],
+            [106.822, -6.205],
+            [106.821, -6.205],
+            [106.821, -6.201]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_type": "BICYCLE_LANE",
+        "threshold_s": 10,
+        "corridor": "SUDIRMAN",
+        "name": "Sudirman bicycle lane"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [106.8225, -6.201],
+            [106.823, -6.201],
+            [106.823, -6.206],
+            [106.8225, -6.206],
+            [106.8225, -6.201]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_type": "DESIGNATED_STOP",
+        "threshold_s": 15,
+        "corridor": "SUDIRMAN",
+        "name": "Halte Sudirman BRT"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [106.8216, -6.204],
+            [106.8224, -6.204],
+            [106.8224, -6.2045],
+            [106.8216, -6.2045],
+            [106.8216, -6.204]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_type": "BUSWAY_LANE",
+        "threshold_s": 0,
+        "corridor": "BUNDARAN HI",
+        "name": "Bundaran HI BRT Zone"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [106.8224, -6.1945],
+            [106.8236, -6.1945],
+            [106.8236, -6.1955],
+            [106.8224, -6.1955],
+            [106.8224, -6.1945]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_type": "NO_PARKING",
+        "threshold_s": 30,
+        "corridor": "BUNDARAN HI",
+        "name": "Thamrin No-Parking Zone"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [106.8220, -6.1915],
+            [106.8236, -6.1915],
+            [106.8236, -6.1925],
+            [106.8220, -6.1925],
+            [106.8220, -6.1915]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_type": "BUSWAY_LANE",
+        "threshold_s": 0,
+        "corridor": "KUNINGAN",
+        "name": "Kuningan Busway Corridor"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [106.8320, -6.2220],
+            [106.8332, -6.2220],
+            [106.8332, -6.2260],
+            [106.8320, -6.2260],
+            [106.8320, -6.2220]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_type": "BICYCLE_LANE",
+        "threshold_s": 10,
+        "corridor": "KUNINGAN",
+        "name": "Rasuna Said Bicycle Lane"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [106.8305, -6.2210],
+            [106.8315, -6.2210],
+            [106.8315, -6.2270],
+            [106.8305, -6.2270],
+            [106.8305, -6.2210]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_type": "NO_PARKING",
+        "threshold_s": 30,
+        "corridor": "SEMANGGI",
+        "name": "Semanggi Interchange Zone"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [106.8160, -6.2180],
+            [106.8180, -6.2180],
+            [106.8180, -6.2200],
+            [106.8160, -6.2200],
+            [106.8160, -6.2180]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_type": "DESIGNATED_STOP",
+        "threshold_s": 15,
+        "corridor": "SEMANGGI",
+        "name": "Semanggi Bus Stop"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [106.8185, -6.2185],
+            [106.8195, -6.2185],
+            [106.8195, -6.2195],
+            [106.8185, -6.2195],
+            [106.8185, -6.2185]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_type": "BUSWAY_LANE",
+        "threshold_s": 0,
+        "corridor": "MONAS",
+        "name": "Monas BRT Zone"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [106.8260, -6.1740],
+            [106.8284, -6.1740],
+            [106.8284, -6.1768],
+            [106.8260, -6.1768],
+            [106.8260, -6.1740]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_type": "NO_PARKING",
+        "threshold_s": 30,
+        "corridor": "MONAS",
+        "name": "Monas No-Parking Area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [106.8250, -6.1720],
+            [106.8290, -6.1720],
+            [106.8290, -6.1735],
+            [106.8250, -6.1735],
+            [106.8250, -6.1720]
+          ]
+        ]
+      }
+    }
+  ]
+}

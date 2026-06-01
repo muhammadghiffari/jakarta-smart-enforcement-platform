@@ -14,8 +14,8 @@ logger = logging.getLogger("jsep.detector")
 # --------------------------------------------------------------------------- #
 # Config from environment (PRD RULE-01)
 # --------------------------------------------------------------------------- #
-DETECTION_MODEL          = os.getenv("DETECTION_MODEL", "yolo11n.pt")
-PLATE_MODEL              = os.getenv("PLATE_MODEL", "models/plate_detector_best.pt")
+DETECTION_MODEL          = os.getenv("DETECTION_MODEL", "yolo11n.pt").strip()
+PLATE_MODEL              = os.getenv("PLATE_MODEL", "models/plate_detector_best.pt").strip()
 CONFIDENCE_THRESHOLD     = float(os.getenv("DETECTION_CONFIDENCE_THRESHOLD", "0.45"))
 PLATE_CONFIDENCE         = float(os.getenv("PLATE_CONFIDENCE_THRESHOLD", "0.50"))
 

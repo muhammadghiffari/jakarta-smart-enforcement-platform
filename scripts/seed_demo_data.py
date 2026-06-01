@@ -73,6 +73,59 @@ def seed_citizen_points(db):
         db.add(c)
     db.commit()
 
+def seed_violations(db):
+    print("Seeding violations...")
+    cameras = db.query(models.Camera).all()
+    if not cameras:
+        return
+    
+    violation_types = ["ILLEGAL_PARKING", "BUSWAY_VIOLATION", "BICYCLE_LANE_VIOLATION", "ILLEGAL_DROPOFF", "GANJIL_GENAP"]
+    vehicle_classes = ["car", "motorcycle", "bus", "truck"]
+    
+    for i in range(50):
+        cam = random.choice(cameras)
+        start = datetime.now(timezone.utc) - timedelta(minutes=random.randint(5, 1440))
+        viol = models.Violation(
+            id=uuid.uuid4(),
+            camera_id=cam.id,
+            track_id=f"track_{1000 + i}",
+            violation_type=random.choice(violation_types),
+            vehicle_class=random.choice(vehicle_classes),
+            start_time=start,
+            end_time=start + timedelta(seconds=random.randint(10, 120)),
+            duration_seconds=random.randint(10, 120),
+            status="DETECTED",
+            composite_confidence=random.uniform(0.72, 0.98)
+        )
+        db.add(viol)
+    db.commit()
+
+def seed_hotspots(db):
+    print("Seeding hotspots...")
+    h3_corridors = [
+        ("8a2e69c2b59ffff", "Bundaran HI"),
+        ("8a2e69c2b587fff", "Sudirman"),
+        ("8a2e69c288b7fff", "Kuningan"),
+        ("8a2e69c2a997fff", "Semanggi"),
+    ]
+    
+    now = datetime.now(timezone.utc)
+    for i in range(8):
+        bucket_time = now - timedelta(minutes=15 * i)
+        bucket_time = bucket_time.replace(minute=(bucket_time.minute // 15) * 15, second=0, microsecond=0)
+        
+        for h3_index, corridor in h3_corridors:
+            hs = models.H3Hotspot(
+                h3_index=h3_index,
+                resolution=10,
+                bucket=bucket_time,
+                risk_score=random.uniform(50.0, 95.0),
+                count=random.randint(5, 45),
+                corridor=corridor
+            )
+            db.merge(hs)
+    db.commit()
+
 def main():
     if not check_connection():
         print("WARNING: PostgreSQL connection failed. Make sure DB is running.")
@@ -84,6 +137,8 @@ def main():
         seed_cameras(db)
         seed_zones(db)
         seed_citizen_points(db)
+        seed_violations(db)
+        seed_hotspots(db)
         print("Done seeding demo data.")
     except Exception as e:
         print(f"Error seeding data: {e}")
