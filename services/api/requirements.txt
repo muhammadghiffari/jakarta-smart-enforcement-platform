@@ -13,3 +13,5 @@ reportlab
 chromadb
 google-generativeai
 jinja2
+opencv-python-headless
+numpy
