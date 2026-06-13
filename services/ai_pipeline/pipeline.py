@@ -16,7 +16,7 @@ from typing import Generator, Optional
 
 import numpy as np
 
-from .detector       import VehicleDetector, PlateDetector, detect_vehicles_and_plates
+from .detector       import VehicleDetector, PlateDetector, detect_vehicles_and_plates, DETECTION_MODEL, PLATE_MODEL, DISPLAY_LABEL
 from .tracker        import JSEPTracker
 from .violation_rules import (
     VehicleTrack, Zone, ViolationEvent,
@@ -38,6 +38,7 @@ PIXELS_PER_METER               = 10.0   # rough calibration for speed estimate
 FPS_DEFAULT                    = 25.0   # assumed fps when reading from file
 SAVE_OUTPUT                    = os.getenv("SAVE_PIPELINE_OUTPUT", "true").lower() == "true"
 OUTPUT_DIR                     = Path(os.getenv("PIPELINE_OUTPUT_DIR", "runs/pipeline"))
+ANPR_EVERY_N_FRAMES            = int(os.getenv("ANPR_EVERY_N_FRAMES", "5"))  # run OCR only every N frames
 
 
 # --------------------------------------------------------------------------- #
@@ -167,12 +168,24 @@ class FrameAnnotator:
         cls,
         frame: np.ndarray,
         tracks: list[dict],
+        plates: list[dict],
         anpr_results: dict[int, dict],
         violations: list[ViolationEvent],
     ) -> np.ndarray:
         out = frame.copy()
         violation_track_ids = {v.track_id for v in violations}
 
+        # ── Draw plate boxes from full-frame detection ──────────────────────────
+        for p in plates:
+            px1, py1, px2, py2 = map(int, p["bbox"])
+            cv2.rectangle(out, (px1, py1), (px2, py2), (0, 0, 255), 2)
+            plate_label = f"plate {p['confidence']:.2f}"
+            (tw, th), _ = cv2.getTextSize(plate_label, cv2.FONT_HERSHEY_SIMPLEX, 0.4, 1)
+            cv2.rectangle(out, (px1, py2), (px1 + tw, py2 + th + 4), (0, 0, 200), -1)
+            cv2.putText(out, plate_label, (px1, py2 + th + 2),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255, 255, 255), 1, cv2.LINE_AA)
+
+        # ── Draw vehicle tracks ─────────────────────────────────────────────────
         for t in tracks:
             x1, y1, x2, y2 = map(int, t["bbox"])
             track_id = t["track_id"]
@@ -185,7 +198,7 @@ class FrameAnnotator:
 
             cv2.rectangle(out, (x1, y1), (x2, y2), color, 2)
 
-            label = f"#{track_id} {cls_name} {t['confidence']:.2f}"
+            label = f"#{track_id} {DISPLAY_LABEL.get(cls_name, cls_name)} {t['confidence']:.2f}"
             anpr  = anpr_results.get(track_id)
             if anpr and anpr.get("plate_cleaned"):
                 plate_str = anpr["plate_cleaned"]
@@ -236,9 +249,20 @@ class JSEPPipeline:
         legal_yaml:    str = "legal_reference/violation_legal_map.yaml",
         fps_override:  Optional[float] = None,
         run_anpr:      bool = True,
+        device:        Optional[str] = None,   # e.g. "cuda:0", "cpu" — auto-detected if None
     ):
-        self.vehicle_detector = VehicleDetector(vehicle_model or os.getenv("DETECTION_MODEL", "yolo11n.pt"))
-        self.plate_detector   = PlateDetector(plate_model   or os.getenv("PLATE_MODEL", "models/plate_detector_best.pt"))
+        from .detector import JSEP_DEVICE
+        resolved_device = device or JSEP_DEVICE
+
+        # Use DETECTION_MODEL from detector.py env config (yolov8m.pt by default)
+        self.vehicle_detector = VehicleDetector(
+            vehicle_model or os.getenv("DETECTION_MODEL", DETECTION_MODEL),
+            device=resolved_device,
+        )
+        self.plate_detector   = PlateDetector(
+            plate_model or os.getenv("PLATE_MODEL", PLATE_MODEL),
+            device=resolved_device,
+        )
         self.tracker          = JSEPTracker()
         self.anpr             = ANPRPipeline() if run_anpr else None
         self.zone_manager     = ZoneManager(zone_path)
@@ -248,6 +272,9 @@ class JSEPPipeline:
         self.fps_override     = fps_override
         self.run_anpr         = run_anpr
         self.all_violations: list[ViolationEvent] = []
+        self._frame_count     = 0  # for ANPR throttling
+        logger.info("JSEPPipeline initialised | device=%s | anpr=%s | anpr_every=%d frames",
+                    resolved_device, run_anpr, ANPR_EVERY_N_FRAMES)
 
     # ---------------------------------------------------------------------- #
     # Per-frame processing
@@ -265,16 +292,21 @@ class JSEPPipeline:
           frame_out  : np.ndarray            — annotated frame
         """
         self.track_state.fps = fps
+        self._frame_count += 1
+        run_anpr_this_frame = (self._frame_count == 1) or (self._frame_count % ANPR_EVERY_N_FRAMES == 0)
 
-        # ─── Stage 1+2: detect vehicles, then plates inside each vehicle ───
+        # ─── Stage 1: detect vehicles ──────────────────────────────────────────
         raw_detections = self.vehicle_detector.detect(frame)
         tracks = self.tracker.update(raw_detections, frame)
 
-        anpr_results: dict = {}
+        # ─── Stage 2: detect plates on FULL FRAME (not per-vehicle crop) ───────
+        # This ensures no plate is missed due to vehicle crop misalignment.
+        full_frame_plates = self.plate_detector.detect_plates(frame, return_crops=True)
 
-        # ─── Stage 3–8 (ANPR) + Zone checks per track ──────────────────────
+        anpr_results: dict = {}
         frame_violations: list[ViolationEvent] = []
 
+        # ─── Stage 3–8 (ANPR, throttled) + Zone checks per track ───────────────
         for t in tracks:
             x1, y1, x2, y2 = map(int, t["bbox"])
             cx = (x1 + x2) / 2
@@ -289,17 +321,30 @@ class JSEPPipeline:
             # Update track state (duration, speed)
             state = self.track_state.update(tid, centroid, in_zone)
 
-            # ANPR: run plate detection inside vehicle crop
-            if self.run_anpr and self.anpr:
-                plates = self.plate_detector.detect_in_vehicle_crop(t["bbox"], frame)
-                if plates:
-                    best_plate = max(plates, key=lambda p: p["confidence"])
-                    if best_plate.get("crop") is not None:
-                        # Store crop for cross-frame consistency
-                        self.track_state.add_plate_crop(tid, best_plate["crop"])
-                        prior_crops = self.track_state.get_plate_crops(tid)[:-1]
-                        anpr_result = self.anpr.process(best_plate["crop"], cross_frame_crops=prior_crops)
-                        anpr_results[tid] = anpr_result
+            # ANPR (throttled): find the best plate crop overlapping this vehicle bbox
+            if self.run_anpr and self.anpr and run_anpr_this_frame:
+                # Match plate detections that overlap with this vehicle's bounding box
+                best_plate = None
+                best_iou   = 0.0
+                for p in full_frame_plates:
+                    px1, py1, px2, py2 = p["bbox"]
+                    # Compute IoU / overlap between vehicle bbox and plate bbox
+                    ix1 = max(x1, px1); iy1 = max(y1, py1)
+                    ix2 = min(x2, px2); iy2 = min(y2, py2)
+                    inter = max(0, ix2 - ix1) * max(0, iy2 - iy1)
+                    if inter > 0:
+                        # Plate must be mostly inside the vehicle box
+                        plate_area = (px2 - px1) * (py2 - py1)
+                        overlap_ratio = inter / (plate_area + 1e-6)
+                        if overlap_ratio > 0.3 and p["confidence"] > best_iou:
+                            best_iou   = p["confidence"]
+                            best_plate = p
+
+                if best_plate and best_plate.get("crop") is not None:
+                    self.track_state.add_plate_crop(tid, best_plate["crop"])
+                    prior_crops = self.track_state.get_plate_crops(tid)[:-1]
+                    anpr_result = self.anpr.process(best_plate["crop"], cross_frame_crops=prior_crops)
+                    anpr_results[tid] = anpr_result
 
             # Build VehicleTrack for rule engine
             anpr_data = anpr_results.get(tid, {})
@@ -332,11 +377,12 @@ class JSEPPipeline:
                         zone.name,
                     )
 
-        # Annotate frame
-        frame_out = self.annotator.draw(frame, tracks, anpr_results, frame_violations)
+        # Annotate frame — draw plate boxes AND vehicle tracks
+        frame_out = self.annotator.draw(frame, tracks, full_frame_plates, anpr_results, frame_violations)
 
         return {
             "tracks":     tracks,
+            "plates":     full_frame_plates,
             "anpr":       anpr_results,
             "violations": frame_violations,
             "frame_out":  frame_out,
@@ -345,7 +391,7 @@ class JSEPPipeline:
     # ---------------------------------------------------------------------- #
     # Video / Image runner
     # ---------------------------------------------------------------------- #
-    def run(self, source, show: bool = False, save: bool = SAVE_OUTPUT) -> Generator[dict, None, None]:
+    def run(self, source, show: bool = False, save: bool = SAVE_OUTPUT, loop: bool = False) -> Generator[dict, None, None]:
         """
         Generator — yields per-frame result dicts.
 
@@ -358,6 +404,7 @@ class JSEPPipeline:
           - int (0) → webcam
         show   : display annotated frames with cv2.imshow
         save   : write annotated output to runs/pipeline/
+        loop   : if True, restart video file from frame 0 when it ends (no effect on RTSP streams)
         """
         source = str(source)
 
@@ -376,8 +423,12 @@ class JSEPPipeline:
             yield result
             return
 
-        # Video / stream
-        cap = cv2.VideoCapture(source if not source.isdigit() else int(source))
+        is_file_source = Path(source).is_file() if not source.isdigit() else False
+
+        def _open_cap():
+            return cv2.VideoCapture(source if not source.isdigit() else int(source))
+
+        cap = _open_cap()
         if not cap.isOpened():
             raise ValueError(f"Could not open video source: {source}")
 
@@ -395,12 +446,22 @@ class JSEPPipeline:
             writer = cv2.VideoWriter(str(out_path), fourcc, fps, (w, h))
             logger.info("Saving annotated video to %s", out_path)
 
-        frame_idx = 0
+        frame_idx  = 0
+        loop_count = 0
         try:
             while True:
                 ret, frame = cap.read()
                 if not ret:
-                    break
+                    if loop and is_file_source:
+                        # Rewind video to beginning
+                        cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
+                        loop_count += 1
+                        logger.info("Video loop #%d — rewinding to frame 0", loop_count)
+                        ret, frame = cap.read()
+                        if not ret:
+                            break  # truly unreadable
+                    else:
+                        break
 
                 t0 = time.perf_counter()
                 result = self.process_frame(frame, fps)
@@ -409,12 +470,14 @@ class JSEPPipeline:
                 result["frame_idx"]   = frame_idx
                 result["fps_actual"]  = 1.0 / elapsed if elapsed > 0 else 0
                 result["total_frames"]= total_frames
+                result["loop_count"]  = loop_count
 
                 if writer:
                     writer.write(result["frame_out"])
                 if show:
                     cv2.imshow("JSEP Pipeline", result["frame_out"])
                     if cv2.waitKey(1) & 0xFF == ord("q"):
+                        logger.info("User pressed Q — stopping pipeline.")
                         break
 
                 yield result

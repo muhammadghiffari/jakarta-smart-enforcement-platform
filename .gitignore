@@ -75,3 +75,7 @@ logs/
 *.log
 docs/
 docs/
+
+# Ignore experiment folder
+experiments/
+artifacts/

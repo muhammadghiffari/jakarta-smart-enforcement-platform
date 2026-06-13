@@ -166,6 +166,7 @@ export default function ETLEPage() {
 
   // Live Mode Interactive States
   const [previewUrl, setPreviewUrl] = useState<string>('');
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [inferenceResult, setInferenceResult] = useState<any>(null);
   const [inferencing, setInferencing] = useState(false);
   const [runPlateDet, setRunPlateDet] = useState(true);
@@ -196,8 +197,9 @@ export default function ETLEPage() {
       const items = data.items ?? [];
       setViolations(items);
       setSelectedId((cur) => (items.some((i) => i.id === cur) ? cur : items[0]?.id ?? ''));
-    } catch {
-      // Fallback already handled
+    } catch (err: any) {
+      console.error("Failed to load queue from backend", err);
+      // setViolations([]); // Remove mock data if backend fails
     } finally {
       setLoading(false);
     }
@@ -285,23 +287,9 @@ export default function ETLEPage() {
       removeFromQueue(violation.id);
       setNotice(`${violation.track_id} approved for E-TLE submission.`);
       setTimeout(fetchAuditLogs, 500);
-    } catch {
-      removeFromQueue(violation.id);
-      setNotice(`${violation.track_id} approved in demo mode.`);
-      
-      // Push local audit entry
-      setAuditLogs(prev => [
-        {
-          id: `aud-local-${Date.now()}`,
-          action: 'CONFIRM',
-          entity_type: 'violation',
-          entity_id: violation.id.slice(0, 8),
-          officer_id: 'OFC-DEMO-01',
-          detail: `[Demo Mode] Vehicle ${violation.track_id} approved.`,
-          created_at: new Date().toISOString()
-        },
-        ...prev
-      ]);
+    } catch (err: any) {
+      console.error("Approve failed:", err);
+      setNotice(`❌ Failed to approve ticket: Backend offline.`);
     }
   };
 
@@ -314,23 +302,11 @@ export default function ETLEPage() {
       });
       if (!res.ok) throw new Error();
       setTimeout(fetchAuditLogs, 500);
-    } catch {
-      // Mock local update
-      setAuditLogs(prev => [
-        {
-          id: `aud-local-${Date.now()}`,
-          action: 'DISMISS',
-          entity_type: 'violation',
-          entity_id: violation.id.slice(0, 8),
-          officer_id: 'OFC-DEMO-01',
-          detail: `[Demo Mode] Vehicle ${violation.track_id} dismissed. Reason: MANUAL REVIEW DISMISSAL.`,
-          created_at: new Date().toISOString()
-        },
-        ...prev
-      ]);
-    } finally {
       removeFromQueue(violation.id);
       setNotice(`${violation.track_id} removed from the review queue.`);
+    } catch (err: any) {
+      console.error("Dismiss failed:", err);
+      setNotice(`❌ Failed to dismiss ticket: Backend offline.`);
     }
   };
 
@@ -343,13 +319,10 @@ export default function ETLEPage() {
       if (!res.ok) throw new Error('API not reachable');
       const data = await res.json();
       setReportContent(data.content || 'Report generation succeeded but returned empty.');
-    } catch {
+    } catch (err: any) {
+      console.error("Report generation failed:", err);
       setReportContent(
-        `BERITA ACARA PELANGGARAN LALU LINTAS\n\n` +
-        `Pada hari ini, telah terekam pelanggaran lalu lintas oleh kendaraan dengan nomor polisi ${violation.track_id}.\n` +
-        `Jenis pelanggaran: ${formatViolationType(violation.violation_type)}\n` +
-        `Lokasi: ${violation.camera_id}\n\n` +
-        `[Demo Mode: API backend is not reachable to run the full narrative agent. Start the FastAPI backend to see the full RAG/LLM integration.]`
+        `[Error: API backend is not reachable to run the full narrative agent. Please start the FastAPI backend to see the full RAG/LLM integration.]`
       );
     } finally {
       setReportLoading(false);
@@ -364,13 +337,10 @@ export default function ETLEPage() {
   };
 
   const processUploadedFile = (file: File) => {
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      setPreviewUrl(reader.result as string);
-      setInferenceResult(null);
-      setNotice(`Loaded image: ${file.name}. Click "Run Detection" to trigger neural model inference.`);
-    };
-    reader.readAsDataURL(file);
+    setSelectedFile(file);
+    setPreviewUrl(URL.createObjectURL(file));
+    setInferenceResult(null);
+    setNotice(`Loaded media: ${file.name}. Click "Run Detection" to trigger neural model inference.`);
   };
 
   const handleDragOver = (e: React.DragEvent) => {
@@ -393,18 +363,18 @@ export default function ETLEPage() {
 
   // Execute YOLO Model on Backend
   const runLiveInference = async () => {
-    if (!previewUrl) return;
+    if (!selectedFile) return;
     setInferencing(true);
     setInferenceResult(null);
     setNotice('Triggering AI detection pipeline (YOLOv8 + Plate OCR)...');
     try {
-      const res = await fetch(`${apiBase}/api/v1/inference/image`, {
+      const formData = new FormData();
+      formData.append('file', selectedFile);
+      formData.append('run_plate_detection', runPlateDet ? 'true' : 'false');
+
+      const res = await fetch(`${apiBase}/api/v1/inference/upload`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          image_base64: previewUrl,
-          run_plate_detection: runPlateDet
-        })
+        body: formData
       });
       if (!res.ok) throw new Error('Inference failed');
       const data = await res.json();
@@ -418,22 +388,10 @@ export default function ETLEPage() {
       } else {
         setCustomPlate('B ' + Math.floor(1000 + Math.random() * 8999 + 1000) + ' OUT');
       }
-    } catch (err) {
-      setNotice('⚠️ Backend inference models offline. Simulating model results for demo...');
-      // Simulated response
-      setTimeout(() => {
-        setInferenceResult({
-          elapsed_ms: 184,
-          image_width: 800,
-          image_height: 500,
-          detections: [
-            { id: 'det-1', class_name: 'car', confidence: 0.9412, bbox: [120, 150, 480, 380], plates: [{ confidence: 0.89, bbox: [280, 310, 380, 340] }] }
-          ],
-          annotated_image: previewUrl // use original
-        });
-        setCustomPlate('B ' + Math.floor(1000 + Math.random() * 8999 + 1000) + ' SIM');
-        setNotice('Inference completed (Simulated).');
-      }, 1000);
+    } catch (err: any) {
+      console.error("Live inference error:", err);
+      setNotice(`❌ Inference failed: Backend offline or model error. Please ensure the Python API is running and models are loaded.`);
+      setInferenceResult(null);
     } finally {
       setInferencing(false);
     }
@@ -453,8 +411,9 @@ export default function ETLEPage() {
       setPreviewUrl(data.annotated_image);
       setNotice(`Demo inference completed in ${data.elapsed_ms}ms.`);
       setCustomPlate('B 1928 SBP');
-    } catch {
-      setNotice('❌ Failed to run demo inference.');
+    } catch (err: any) {
+      console.error("Bundled demo inference failed:", err);
+      setNotice('❌ Failed to run bundled demo inference. Backend offline.');
     } finally {
       setInferencing(false);
     }
@@ -488,12 +447,9 @@ export default function ETLEPage() {
       setViolations(prev => [payload, ...prev]);
       setMode('demo');
       setSelectedId(payload.id);
-    } catch {
-      // Offline fallback
-      setViolations(prev => [payload, ...prev]);
-      setNotice(`[Demo Mode] Custom violation ${customPlate} added to local queue.`);
-      setMode('demo');
-      setSelectedId(payload.id);
+    } catch (err: any) {
+      console.error("Ingest failed:", err);
+      setNotice(`❌ Failed to ingest custom violation. Backend offline.`);
     }
   };
 
@@ -807,13 +763,13 @@ export default function ETLEPage() {
                       <UploadCloud size={40} color={isDragOver ? 'var(--accent)' : 'var(--text-secondary)'} />
                       <div>
                         <strong style={{ color: 'var(--text-primary)', fontSize: '14px' }}>Drag & Drop traffic video frame</strong>
-                        <p style={{ color: 'var(--text-muted)', fontSize: '12px', marginTop: '4px' }}>Supports PNG, JPG, or JPEG format (max 5MB)</p>
+                        <p style={{ color: 'var(--text-muted)', fontSize: '12px', marginTop: '4px' }}>Supports PNG, JPG, or MP4 format (max 50MB)</p>
                       </div>
                       <span className="btn-secondary-pill btn-compact" style={{ marginTop: '8px' }}>Browse File</span>
                       <input 
                         type="file" 
                         id="image-upload-input" 
-                        accept="image/*" 
+                        accept="image/*,video/*" 
                         style={{ display: 'none' }} 
                         onChange={handleFileChange}
                       />
@@ -825,14 +781,22 @@ export default function ETLEPage() {
                         <div>
                           <span style={{ fontSize: '11px', textTransform: 'uppercase', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>Original Frame</span>
                           <div style={{ width: '100%', height: '240px', background: '#000', borderRadius: '8px', overflow: 'hidden', border: '1px solid var(--border)' }}>
-                            <img src={previewUrl} alt="Original uploaded file" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                            {selectedFile && selectedFile.type.startsWith('video/') ? (
+                              <video src={previewUrl} controls style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                            ) : (
+                              <img src={previewUrl} alt="Original uploaded file" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                            )}
                           </div>
                         </div>
                         <div>
                           <span style={{ fontSize: '11px', textTransform: 'uppercase', color: 'var(--accent)', fontFamily: 'var(--font-mono)' }}>CV Annotated Output</span>
                           <div style={{ width: '100%', height: '240px', background: '#000', borderRadius: '8px', overflow: 'hidden', border: '1px solid var(--border-accent)', position: 'relative' }}>
                             {inferenceResult ? (
-                              <img src={inferenceResult.annotated_image} alt="Inference annotated file" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                              inferenceResult.annotated_video_url ? (
+                                <video src={`${apiBase}${inferenceResult.annotated_video_url}`} controls autoPlay loop style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                              ) : inferenceResult.annotated_image ? (
+                                <img src={inferenceResult.annotated_image} alt="Inference annotated file" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                              ) : null
                             ) : (
                               <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)', fontSize: '12px', gap: '8px' }}>
                                 {inferencing ? (

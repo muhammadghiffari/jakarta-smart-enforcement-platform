@@ -5,7 +5,7 @@
 # Stage 2 : Quality assessment       (resolution + blur score)
 # Stage 3 : Super-resolution         (Real-ESRGAN ×4 if quality < 0.6)
 # Stage 4 : Deskew / perspective     (contour-based angle correction)
-# Stage 5 : OCR                      (PaddleOCR PP-OCRv5)
+# Stage 5 : OCR                      (EasyOCR primary / PaddleOCR CPU fallback)
 # Stage 6 : Regex validation         (Indonesian plate patterns)
 # Stage 7 : Composite confidence     (0.6·ocr + 0.3·format + 0.1·cross-frame)
 # Stage 8 : Human review gate        (composite < 0.75 → human_review queue)
@@ -34,7 +34,6 @@ OCR_CORRECTIONS = {
 
 def _apply_ocr_corrections(text: str) -> str:
     """Heuristic correction for typical misreads on the letter-only suffix."""
-    # Only correct the trailing letter block (after the digits)
     match = re.match(r'^([A-Z]{1,2}\s?)(\d{1,4})(\s?)(.*)$', text)
     if match:
         prefix, digits, sep, suffix = match.groups()
@@ -67,6 +66,11 @@ class ANPRPipeline:
     Stages 2–8 of the 8-stage ANPR pipeline.
     Stage 1 (plate detection) is handled by PlateDetector and injected as crops.
 
+    OCR Engine Priority:
+    1. PaddleOCR CPU mode  (PP-OCRv5, highest accuracy — same model weights as GPU)
+    2. EasyOCR             (GPU-accelerated, stable fallback on WSL)
+    3. Returns empty string (graceful degradation)
+
     Usage
     -----
     pipeline = ANPRPipeline()
@@ -81,16 +85,39 @@ class ANPRPipeline:
     # Initialisation
     # ---------------------------------------------------------------------- #
     def _init_ocr(self):
-        """Stage 5: PaddleOCR PP-OCRv5."""
+        """Stage 5: PaddleOCR CPU primary (best accuracy), EasyOCR fallback."""
+        self.ocr = None
+        self.ocr_backend = None
+        self.ocr_available = False
+
+        # ── Priority 1: EasyOCR (GPU Accelerated) ─────────────────────────
+        try:
+            import easyocr
+            self.ocr = easyocr.Reader(
+                ["en"],
+                gpu=True,       # uses GPU if available, silently falls back to CPU
+                verbose=False,
+            )
+            self.ocr_backend = "easyocr"
+            self.ocr_available = True
+            logger.info("EasyOCR (GPU) initialised successfully.")
+            return
+        except Exception as exc:
+            logger.warning("EasyOCR not available (%s). Falling back to PaddleOCR…", exc)
+
+        # ── Priority 2: PaddleOCR (PP-OCRv5) CPU Fallback ─────────────────
+        # paddlepaddle 3.0.0 CPU-only build is installed (no CUDA).
         try:
             from paddleocr import PaddleOCR
-            self.ocr = PaddleOCR(lang="en", use_gpu=False, show_log=False)
+            self.ocr = PaddleOCR(lang="en")
+            self.ocr_backend = "paddleocr"
             self.ocr_available = True
-            logger.info("PaddleOCR initialised (PP-OCRv5).")
+            logger.info("PaddleOCR CPU fallback initialised.")
+            return
         except Exception as exc:
-            logger.warning("PaddleOCR not available (%s). OCR will return empty strings.", exc)
-            self.ocr = None
-            self.ocr_available = False
+            logger.warning("PaddleOCR also failed (%s). OCR disabled.", exc)
+
+        logger.error("No OCR backend available — ANPR will return empty strings.")
 
     def _init_super_resolution(self):
         """Stage 3: Real-ESRGAN ×4 super-resolution."""
@@ -156,7 +183,6 @@ class ANPRPipeline:
         rect = cv2.minAreaRect(largest)
         angle = rect[2]
         if abs(angle) > 30:
-            # Skip extreme angles — might be wrong contour
             return crop
         center = (crop.shape[1] // 2, crop.shape[0] // 2)
         M = cv2.getRotationMatrix2D(center, angle, 1.0)
@@ -167,25 +193,54 @@ class ANPRPipeline:
     # ---------------------------------------------------------------------- #
     def run_ocr(self, crop: np.ndarray) -> tuple[str, float]:
         """
-        PaddleOCR 3.5+ / PP-OCRv5.
-
+        Dispatches to the best available OCR backend.
         Returns (raw_text, mean_confidence).
-        Falls back to empty string if OCR unavailable.
         """
-        if not self.ocr_available:
+        if not self.ocr_available or self.ocr is None:
             return "", 0.0
+
         try:
-            result = self.ocr.ocr(crop, cls=True)
-            if not result or not result[0]:
-                return "", 0.0
-            texts, confidences = [], []
-            for line in result[0]:
-                texts.append(line[1][0])
-                confidences.append(float(line[1][1]))
-            return "".join(texts), float(np.mean(confidences)) if confidences else 0.0
+            if self.ocr_backend == "easyocr":
+                return self._run_easyocr(crop)
+            elif self.ocr_backend == "paddleocr":
+                return self._run_paddleocr(crop)
         except Exception as exc:
             logger.warning("OCR failed: %s", exc)
+
+        return "", 0.0
+
+    def _run_easyocr(self, crop: np.ndarray) -> tuple[str, float]:
+        """EasyOCR inference."""
+        results = self.ocr.readtext(crop, detail=1, paragraph=False)
+        if not results:
             return "", 0.0
+        texts, confs = [], []
+        for (_, text, conf) in results:
+            texts.append(text)
+            confs.append(float(conf))
+        return " ".join(texts), float(np.mean(confs)) if confs else 0.0
+
+    def _run_paddleocr(self, crop: np.ndarray) -> tuple[str, float]:
+        """PaddleOCR inference."""
+        # PaddleOCR 3.x ocr() usage without cls
+        result = self.ocr.ocr(crop)
+        if not result:
+            return "", 0.0
+        
+        res = result[0]
+        # PaddleOCR 3.0.0 format
+        if isinstance(res, dict) and "rec_texts" in res:
+            texts = res.get("rec_texts", [])
+            confidences = res.get("rec_scores", [])
+        else:
+            # PaddleOCR 2.x format fallback
+            if not res: return "", 0.0
+            texts, confidences = [], []
+            for line in res:
+                texts.append(line[1][0])
+                confidences.append(float(line[1][1]))
+                
+        return " ".join(texts), float(np.mean(confidences)) if confidences else 0.0
 
     # ---------------------------------------------------------------------- #
     # Stage 7 — Composite confidence
@@ -236,6 +291,7 @@ class ANPRPipeline:
           composite_confidence: float 0–1
           needs_human_review  : bool  — True when composite < 0.75 (RULE-04)
           rejection_reason    : str | None
+          ocr_backend         : str  — which OCR engine was used
         """
         # Stage 2: quality
         quality = self.assess_quality(plate_crop)
@@ -252,10 +308,10 @@ class ANPRPipeline:
         # Stage 6: validation
         is_valid, cleaned = validate_plate(raw_text)
 
-        # Cross-frame OCR for consistency (future v1 extension: run OCR on prior crops)
+        # Cross-frame OCR for consistency
         cross_texts: list[str] = []
         if cross_frame_crops:
-            for prior_crop in cross_frame_crops[:3]:   # limit to last 3 frames
+            for prior_crop in cross_frame_crops[:3]:
                 prior_raw, _ = self.run_ocr(self.deskew(prior_crop))
                 _, prior_cleaned = validate_plate(prior_raw)
                 cross_texts.append(prior_cleaned)
@@ -272,4 +328,5 @@ class ANPRPipeline:
             "composite_confidence": composite,
             "needs_human_review":   composite < 0.75,   # Stage 8 — RULE-04
             "rejection_reason":     None if is_valid else "REGEX_REJECTED",
+            "ocr_backend":          self.ocr_backend or "none",
         }

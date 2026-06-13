@@ -13,3 +13,11 @@ reportlab
 chromadb
 google-generativeai
 jinja2
+opencv-python-headless
+ultralytics
+python-multipart
+shapely
+h3
+scipy
+pulp
+apscheduler

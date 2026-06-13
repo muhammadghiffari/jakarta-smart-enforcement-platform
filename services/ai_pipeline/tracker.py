@@ -7,6 +7,10 @@ from pathlib import Path
 from typing import Optional
 import numpy as np
 
+# Resolve repo root
+ROOT_DIR = Path(__file__).resolve().parents[2]
+
+
 logger = logging.getLogger("jsep.tracker")
 
 VEHICLE_CLASSES = [
@@ -24,11 +28,12 @@ class JSEPTracker:
     lightweight IoU-only tracker so the pipeline still runs on CPU.
     """
 
-    def __init__(self, reid_weights: str = "osnet_x0_25_msmt17.pt"):
+    def __init__(self, reid_weights: Optional[str] = None):
         self._has_gpu = self._check_gpu()
         self._tracker  = None
         self._fallback = False
-        self._load_tracker(reid_weights)
+        default_reid = str(ROOT_DIR / "models" / "osnet_x0_25_msmt17.pt")
+        self._load_tracker(reid_weights or default_reid)
 
     # ---------------------------------------------------------------------- #
     # Initialisation
@@ -42,9 +47,10 @@ class JSEPTracker:
 
     def _load_tracker(self, reid_weights: str):
         try:
-            from boxmot import BotSort
+            from boxmot.trackers.tracker_zoo import create_tracker
             device = "cuda:0" if self._has_gpu else "cpu"
-            self._tracker = BotSort(
+            self._tracker = create_tracker(
+                "botsort",
                 reid_weights=Path(reid_weights),
                 device=device,
                 half=False,
@@ -121,7 +127,8 @@ class JSEPTracker:
             try:
                 self._tracker.reset()
             except Exception:
-                self._load_tracker("osnet_x0_25_msmt17.pt")
+                default_reid = str(ROOT_DIR / "models" / "osnet_x0_25_msmt17.pt")
+                self._load_tracker(default_reid)
         self._iou_state = {}
 
     # ---------------------------------------------------------------------- #

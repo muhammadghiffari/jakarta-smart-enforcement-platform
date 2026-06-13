@@ -10,7 +10,9 @@ from typing import Any
 
 import cv2
 import numpy as np
-from fastapi import APIRouter, HTTPException
+import shutil
+import uuid
+from fastapi import APIRouter, HTTPException, UploadFile, File, Form
 from pydantic import BaseModel, Field
 
 from services.ai_pipeline.pipeline import JSEPPipeline
@@ -30,7 +32,8 @@ class DetectionResponse(BaseModel):
     image_width: int
     image_height: int
     detections: list[dict[str, Any]]
-    annotated_image: str
+    annotated_image: str | None = None
+    annotated_video_url: str | None = None
 
 
 def _model_path(env_name: str, fallback: str) -> str:
@@ -184,4 +187,90 @@ def infer_demo(run_plate_detection: bool = False):
     if frame is None:
         raise HTTPException(status_code=404, detail=f"Demo image not readable: {sample}")
     return _run_inference(frame, run_plate_detection, _source_descriptor("demo", sample))
+
+
+@router.post("/upload", response_model=DetectionResponse)
+def infer_upload(file: UploadFile = File(...), run_plate_detection: bool = Form(False)):
+    ext = Path(file.filename or "").suffix.lower()
+    
+    # Save to temporary file
+    temp_dir = Path("runs/temp")
+    temp_dir.mkdir(parents=True, exist_ok=True)
+    temp_file = temp_dir / f"upload_{uuid.uuid4().hex}{ext}"
+    
+    with temp_file.open("wb") as buffer:
+        shutil.copyfileobj(file.file, buffer)
+
+    if ext in {".jpg", ".jpeg", ".png", ".bmp"}:
+        frame = cv2.imread(str(temp_file))
+        if frame is None:
+            raise HTTPException(status_code=400, detail="Image could not be decoded")
+        return _run_inference(frame, run_plate_detection, _source_descriptor("upload", temp_file))
+    
+    # Handle Video
+    pipeline = _jsep_pipeline(run_plate_detection)
+    all_detections = []
+    started = time.perf_counter()
+    
+    # Run the generator to save output
+    width, height = 0, 0
+    for result in pipeline.run(str(temp_file), save=True, show=False):
+        if width == 0 and result.get("frame_out") is not None:
+            width = result["frame_out"].shape[1]
+            height = result["frame_out"].shape[0]
+            
+    elapsed_ms = int((time.perf_counter() - started) * 1000)
+    
+    # Pipeline saves to runs/pipeline/{stem}_jsep.mp4
+    out_name = f"{temp_file.stem}_jsep.mp4"
+    out_path = Path("runs/pipeline") / out_name
+    
+    if out_path.exists():
+        import subprocess
+        import imageio_ffmpeg
+        safe_out = Path("runs/pipeline") / f"{temp_file.stem}_jsep_web.mp4"
+        try:
+            ffmpeg_exe = imageio_ffmpeg.get_ffmpeg_exe()
+            subprocess.run([
+                ffmpeg_exe, "-y", "-i", str(out_path),
+                "-vcodec", "libx264", "-f", "mp4", str(safe_out)
+            ], check=True, capture_output=True)
+            safe_out.replace(out_path)
+        except Exception as e:
+            print("FFMPEG conversion failed:", e)
+            
+    video_url = f"/runs/pipeline/{out_name}" if out_path.exists() else None
+    
+    vehicle_path = _model_path("DETECTION_MODEL", "models/vehicle_detector_best.pt")
+    plate_path = _model_path("PLATE_MODEL", "models/plate_detector_best.pt")
+    
+    summary = pipeline.summary()
+    for v in summary.get("violations", []):
+        all_detections.append({
+            "id": f"track-{v.get('track_id', 'unknown')}",
+            "bbox": [0,0,0,0],
+            "class_id": 0,
+            "class_name": v.get("vehicle_class", "vehicle"),
+            "confidence": 1.0,
+            "plates": [{"text": v.get("plate_number", ""), "confidence": v.get("plate_confidence", 0.0), "bbox": [0,0,0,0]}] if v.get("plate_number") else []
+        })
+
+    return DetectionResponse(
+        source=_source_descriptor("upload", temp_file),
+        model={
+            "vehicle_model": vehicle_path,
+            "vehicle_model_exists": Path(vehicle_path).exists(),
+            "plate_model": plate_path,
+            "plate_model_exists": Path(plate_path).exists(),
+            "plate_detection": run_plate_detection,
+            "full_pipeline_active": True,
+            "violations_detected": len(summary.get("violations", []))
+        },
+        elapsed_ms=elapsed_ms,
+        image_width=width,
+        image_height=height,
+        detections=all_detections,
+        annotated_image=None,
+        annotated_video_url=video_url
+    )
 
